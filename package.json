@@ -1,0 +1,33 @@
+{
+  "name": "drcrowther-webd",
+  "version": "1.0.0",
+  "description": "Portfolio of my skills building",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crowtherdr/drcrowther-webd.git"
+  },
+  "keywords": [
+    "porfolio",
+    "skills",
+    "building",
+    "nodejs",
+    "html",
+    "css",
+    "javascript",
+    "web",
+    "components"
+  ],
+  "author": "David R. Crowther",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crowtherdr/drcrowther-webd/issues"
+  },
+  "homepage": "https://github.com/crowtherdr/drcrowther-webd#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
