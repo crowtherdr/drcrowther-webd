@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/crowtherdr/drcrowther-webd/issues"
   },
-  "homepage": "https://github.com/crowtherdr/drcrowther-webd#readme",
+  "homepage": "https://github.com/crowtherdr/drcrowther-webd#readme"
   },
   "engines": {
     "node": "4"
