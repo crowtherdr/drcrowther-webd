@@ -1,0 +1,38 @@
+ol, ul {
+  list-style: none;
+}
+
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-app header {
+  background: url("../img/portfolio-logo.jpg") no-repeat;
+  background-position: 490px 0;
+  background-size: 100px;
+  height: 200px;
+}
+
+.portfolio-app h1 {
+  font-family: arial, sans-serif;
+  font-size: 5.6em;
+  line-height: 88px;
+}
+
+body.portfolio-app {
+  background: url("../img/portfolio-background.jpg");
+  background-color: transparent;
+  background-position: -160px -300px;
+  margin: 16px;
+  padding-bottom: 40px;
+}
+
+.portfolio-app footer {
+  color: #bfbfbf;
+  margin-top: 90px;
+}
+
+.portfolio-app.Home .img-wrapper {
+  float: right;
+}

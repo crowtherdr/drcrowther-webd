@@ -12,7 +12,7 @@
     "url": "git+https://github.com/crowtherdr/drcrowther-webd.git"
   },
   "keywords": [
-    "porfolio",
+    "portfolio",
     "skills",
     "building",
     "nodejs",
@@ -28,6 +28,10 @@
     "url": "https://github.com/crowtherdr/drcrowther-webd/issues"
   },
   "homepage": "https://github.com/crowtherdr/drcrowther-webd#readme",
+  },
+  "engines": {
+    "node": "4"
+  },
   "dependencies": {
     "body-parser": "~1.11.0",
     "ejs": "~2.2.4",
