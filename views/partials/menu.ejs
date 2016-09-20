@@ -9,15 +9,20 @@
 
 <%
 pageName = pageName.trim();
-examples = "";
-exampleForm = "";
+htmlExamples = "";
+htmlExampleForm = "";
+jsExamples = "";
 
-if (pageName === 'Examples') {
-  examples = 'active';
-}
-
-if (pageName === 'ExampleForm') {
-  exampleForm = 'active';
+switch(pageName) {
+  case "htmlExamples":
+    htmlExamples = 'active';
+    break;
+  case "htmlExampleForm":
+    htmlExampleForm = 'active';
+    break;
+  case "jsExamples":
+    jsExamples = 'active';
+    break;
 }
 %>
 
@@ -40,21 +45,18 @@ if (pageName === 'ExampleForm') {
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="<%- examples %>">
+            <li class="<%- htmlExamples %>">
               <a href="/html-css/examples">HTML/CSS Examples<span class="sr-only">(current)</span></a>
             </li>
-            <li class="<%- exampleForm %>"><a href="/html-css/form-example">HTML5 Form Example</a></li>
+            <li class="<%- htmlExampleForm %>"><a href="/html-css/form-example">HTML5 Form Example</a></li>
+            <li class="<%- jsExamples %>"><a href="/javascript/examples">JavaScript Examples</a></li>
 <!--             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
- -->          </ul>
+            <li><a href="#">One more separated link</a></li>-->
+          </ul>
         </li>
-
-
-
-
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -26,6 +26,11 @@ body.portfolio-app {
   padding-bottom: 40px;
 }
 
+.portfolio-app ul.bulleted {
+  list-style: initial;
+  margin-left: 20px;
+}
+
 .portfolio-app footer {
   color: #bfbfbf;
   margin-top: 90px;
@@ -33,4 +38,26 @@ body.portfolio-app {
 
 .portfolio-app .img-wrapper.right {
   float: right;
+}
+
+.portfolio-app form {
+  margin-bottom: 60px;
+}
+
+.portfolio-app form li {
+  display: table-row;
+  margin-bottom: 12px;
+}
+
+.portfolio-app form li label {
+  display: table-cell;
+  padding-right: 12px;
+  text-align: right;
+  width: 16%;
+}
+
+.portfolio-app form li input {
+  display: table-cell;
+  margin-bottom: 12px;
+  width: 74%;
 }

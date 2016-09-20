@@ -24,6 +24,10 @@ app.get('/html-css/form-example', function(request, response){
   response.render("html-css/form-example", { layout:'layout.ejs' });
 });
 
+app.get('/javascript/examples', function(request, response){
+  response.render("javascript/examples", { layout:'layout.ejs' });
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
