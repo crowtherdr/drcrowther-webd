@@ -16,8 +16,6 @@ ol, ul, li {
 
 .portfolio-app h1 {
   font-family: arial, sans-serif;
-  font-size: 5.6em;
-  line-height: 88px;
 }
 
 body.portfolio-app {
@@ -33,6 +31,6 @@ body.portfolio-app {
   margin-top: 90px;
 }
 
-.portfolio-app.Home .img-wrapper {
+.portfolio-app .img-wrapper.right {
   float: right;
 }

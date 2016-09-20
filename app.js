@@ -15,8 +15,13 @@ app.use(bodyParser());
 app.get('/', function(request, response){
   response.render("index", { layout:'layout.ejs' });
 });
+
 app.get('/html-css/examples', function(request, response){
   response.render("html-css/examples", { layout:'layout.ejs' });
+});
+
+app.get('/html-css/form-example', function(request, response){
+  response.render("html-css/form-example", { layout:'layout.ejs' });
 });
 
 app.listen(app.get('port'), function() {
