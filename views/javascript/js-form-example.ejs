@@ -1,0 +1,38 @@
+<script>
+  function validateForm() {
+    var exampleForm = document.forms["exampleForm"];
+console.log('exampleForm', exampleForm);
+    // if (x == null || x == "") {
+    //     alert("Name must be filled out");
+    //     return false;
+    // }
+
+    return false;
+  };
+</script>
+
+  <section class="container-fluid">
+    <h2>HTML5 Form Example</h2>
+    <p>This following form contains some of the new HTML5 form fields and has validation for the form. Try out the form to see what the fields do. Don't hesitate to submit the form. It will not go anywhere.
+    <form name="exampleForm" onSubmit="return validateForm();">
+      <ol>
+        <li><label for="name">Name:</label> <input id="name" type="text" placeholder="Enter your full name" autofocus required /></li>
+        <li><label for="age">Age:</label> <input id="age" type="number" placeholder="Your age" /></li>
+        <li><label for="pickNumber">Pick a number (1-10):</label> <input id="pickNumber" type="range" min="1" max="10" /></li>
+        <li><label for="email">Email:</label> <input id="email" type="email" placeholder="Your email address" required /></li>
+        <li><label for="email">Secure info:</label> <input type="text" name="secure-info" placeholder="secure info--no autocomplete=" autocomplete="off"></li>
+        <li><label></label><button type="submit">Submit</button>
+      </ol>
+    </form>
+    <form submit="return false;">
+      <input type="search" placeholder="Search for something" />
+    </form>
+    <ul>
+      <li>
+        <a href="" target=""></a>
+      </li>
+    </ul>
+  </section>
+
+<%- contentFor('pageName') %>
+htmlExampleForm

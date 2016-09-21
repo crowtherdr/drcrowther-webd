@@ -1,31 +1,37 @@
-<script>
-  function validateForm() {
-    var exampleForm = document.forms["exampleForm"];
-console.log('exampleForm', exampleForm);
-    // if (x == null || x == "") {
-    //     alert("Name must be filled out");
-    //     return false;
-    // }
-
-    return false;
-  };
-</script>
-
   <section class="container-fluid">
-    <h2>HTML5 Form Example</h2>
+    <h2>HTML5 Form Example (validation with no JavaScript)</h2>
     <p>This following form contains some of the new HTML5 form fields and has validation for the form. Try out the form to see what the fields do. Don't hesitate to submit the form. It will not go anywhere.
-    <form name="exampleForm" onSubmit="return validateForm();">
+    <form name="exampleForm">
       <ol>
-        <li><label for="name">Name:</label> <input id="name" type="text" placeholder="Enter your full name" autofocus required /></li>
-        <li><label for="age">Age:</label> <input id="age" type="number" placeholder="Your age" /></li>
-        <li><label for="pickNumber">Pick a number (1-10):</label> <input id="pickNumber" type="range" min="1" max="10" /></li>
-        <li><label for="email">Email:</label> <input id="email" type="email" placeholder="Your email address" required /></li>
-        <li><label for="email">Secure info:</label> <input type="text" name="secure-info" placeholder="secure info--no autocomplete=" autocomplete="off"></li>
-        <li><label></label><button type="submit">Submit</button>
+        <li>
+          <label for="name">Name:</label> <input id="name" type="text" placeholder="Enter your full name" autofocus required />
+          <p>(has autoFocus & required)</p>
+        </li>
+        <li>
+          <label for="age">Age:</label> <input id="age" type="number" placeholder="Your age" min="0" rangeUnderflow required />
+          <p>(has rangeUnderFlow)</p>
+        </li>
+        <li>
+          <label for="pickNumber">Pick a number (1-10):</label> <input id="pickNumber" type="range" min="1" max="10" />
+          <p>(has min & max contraints)</p>
+        </li>
+        <li>
+          <label for="email">Email:</label> <input id="email" type="email" placeholder="Your email address" required typeMismatch />
+          <p>(has typeMismatch--checks email format)</p>
+        </li>
+        <li>
+          <label for="secureInfo">Secure info:</label> <input id="secureInfo" type="number" name="secure-info" placeholder="secure info--no autocomplete" autocomplete="off" patternMismatch pattern="[0-9]{16}" title="This field must contain a number of 16 digits with no spaces or dashes">
+          <p>(has patternMismatch for number, but does not seem to work--also has autocomplete=off)</p>
+        </li>
+        <li>
+          <label></label>
+          <button type="submit">Submit</button>
+        </li>
       </ol>
     </form>
-    <form submit="return false;">
+    <form>
       <input type="search" placeholder="Search for something" />
+      <p>This is supposed to be an input field of type "search", but would likely look different only on a mobile device.</p>
     </form>
     <ul>
       <li>
@@ -36,3 +42,6 @@ console.log('exampleForm', exampleForm);
 
 <%- contentFor('pageName') %>
 htmlExampleForm
+
+<%- contentFor('htmlExampleForm') %>
+active
