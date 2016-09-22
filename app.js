@@ -28,6 +28,10 @@ app.get('/html-css/srcset-svg', function(request, response){
   response.render("html-css/srcset-svg", { layout:'layout.ejs' });
 });
 
+app.get('/html-css/device-access', function(request, response){
+  response.render("html-css/device-access", { layout:'layout.ejs' });
+});
+
 app.get('/javascript/examples', function(request, response){
   response.render("javascript/examples", { layout:'layout.ejs' });
 });

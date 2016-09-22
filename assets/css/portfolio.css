@@ -8,7 +8,7 @@ ol, ul, li {
 }
 
 .portfolio-app header {
-  background: url("../img/portfolio-logo.jpg") no-repeat;
+/*  background: url("../img/portfolio-logo.jpg") no-repeat;*/
   background-position: 490px 0;
   background-size: 100px;
   height: 200px;
@@ -19,7 +19,7 @@ ol, ul, li {
 }
 
 body.portfolio-app {
-  background: url("../img/portfolio-background.jpg");
+/*  background: url("../img/portfolio-background.jpg");*/
   background-color: transparent;
   background-position: -160px -300px;
   margin: 16px;
@@ -28,7 +28,10 @@ body.portfolio-app {
 
 .portfolio-app ul.bulleted {
   list-style: initial;
-  margin-left: 20px;
+}
+
+.portfolio-app ul.bulleted li {
+  margin: 0 0 20px 20px;
 }
 
 .portfolio-app footer {
@@ -108,4 +111,11 @@ body.portfolio-app {
 
 .portfolio-app .color .cls-2 {
   fill: red;
+}
+
+.portfolio-app .vibrate-supported span.vibrate {
+  display: none;
+}
+.portfolio-app .vibrate-supported span.vibrate.vibrating {
+  display: block;
 }

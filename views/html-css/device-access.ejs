@@ -1,0 +1,37 @@
+  <section class="container-fluid">
+    <h2>HTML - Device Access</h2>
+    <ul class="bulleted">
+      <li>Touch Events <button></button></li>
+      <li>Geolocation <button></button></li>
+      <li>Device Orientation <button></button></li>
+      <li class="vibrate-supported">Vibration <button onclick="javascript:vibrateDevice()">Vibrate Device</button> <span class="vibrate">vibrating...</span></li>
+      <li>Ambient Light <button>Turn On</button></li>
+      <li>Proximity <button></button></li>
+      <li>Battery Status <button>Show Battery Status</button></li>
+    </ul>
+  </section>
+
+  <script>
+    function vibrateDevice() {
+      console.log("vibrating");
+      navigator.vibrate(1000);
+      $(".vibrate-supported span").toggleClass("vibrating");
+      window.setTimeout(function() {
+        $(".vibrate-supported span").toggleClass("vibrating");
+      }, 1000);
+    }
+
+    // enable vibration support
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
+    if (!navigator.vibrate) {
+      // vibration API not supported
+      $(".vibrate-supported").addClass("hide");
+    }
+  </script>
+
+<%- contentFor('pageName') %>
+deviceAccess
+
+<%- contentFor('deviceAccess') %>
+active
