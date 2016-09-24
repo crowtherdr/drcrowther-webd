@@ -28,14 +28,14 @@ pageName = pageName.trim();
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Examples <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HTML/CSS Examples <span class="caret"></span></a>
           <ul class="dropdown-menu">
 <% if (pageName === "htmlExamples") { %>
             <li class="active">
 <% } else { %>
             <li>
 <% } %>
-              <a href="/html-css/examples">HTML/CSS Examples<span class="sr-only">(current)</span></a>
+              <a href="/html-css/examples">Production Examples<span class="sr-only">(current)</span></a>
             </li>
 <% if (pageName === "htmlExampleForm") { %>
             <li class="active">
@@ -49,21 +49,28 @@ pageName = pageName.trim();
 <% } else { %>
             <li>
 <% } %>
-              <a href="/html-css/srcset-svg">HTML srcset & svg Examples</a>
+              <a href="/html-css/srcset-svg">SRCSET & SVG Examples</a>
             </li>
-<% if (pageName === "scrsetSVGExamples") { %>
+<% if (pageName === "deviceAccess") { %>
             <li class="active">
 <% } else { %>
             <li>
 <% } %>
-              <a href="/html-css/device-access">HTML Device Access Examples</a>
+              <a href="/html-css/device-access">Device Access Examples</a>
             </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JavaScript Examples <span class="caret"></span></a>
+          <ul class="dropdown-menu">
 <% if (pageName === "jsExamples") { %>
             <li class="active">
 <% } else { %>
             <li>
 <% } %>
-              <a href="/javascript/examples">JavaScript Examples</a>
+              <a href="/javascript/examples">Examples</a>
             </li>
 <!--             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>

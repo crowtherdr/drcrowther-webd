@@ -1,8 +1,9 @@
   <section class="container-fluid device-access light-theme">
-    <h2>HTML Device Access (if an option doesn't show, the device doesn't allow it)</h2>
+    <h2>HTML Device Access</h2>
+    <p><strong>If an option doesn't show, the device doesn't allow it.</strong></p>
     <p>Firefox seems to work best on a desktop/laptop.</p>
     <ul class="bulleted">
-<!--       <li>Touch Events <button></button></li> -->
+      <li>Touch Events Examples: The landscape and portrait pedigrees on <a href="https://familysearch.org/tree" target="demo_window">familysearch.org</a> use touch events to enable/disable a plugin for the mouse to drag the view. I helped adjust these events.</li>
       <li class="geolocation-supported">Geolocation <button onclick="javascript:getLocation()">Get location</button> <span></span></li>
       <li class="device-orientation">Device Orientation <button class="turn-on" onclick="javascript:turnOnDeviceOrientation(true)">Turn On</button> <button class="turn-off hide" onclick="javascript:turnOnDeviceOrientation(false)">Turn Off</button></li>
       <li class="vibrate-supported">Vibration <button onclick="javascript:vibrateDevice()">Vibrate Device</button> <span class="vibrate">vibrating...</span></li>
