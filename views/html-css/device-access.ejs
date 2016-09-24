@@ -4,12 +4,14 @@
     <p>Firefox seems to work best on a desktop/laptop.</p>
     <ul class="bulleted">
       <li>Touch Events Examples: The landscape and portrait pedigrees on <a href="https://familysearch.org/tree" target="demo_window">familysearch.org</a> use touch events to enable/disable a plugin for the mouse to drag the view. I helped adjust these events.</li>
-      <li class="geolocation-supported">Geolocation <button onclick="javascript:getLocation()">Get location</button> <span></span></li>
+      <li class="geolocation-supported hide">Geolocation <button onclick="javascript:getLocation()">Get location</button> <span></span></li>
       <li class="device-orientation">Device Orientation <button class="turn-on" onclick="javascript:turnOnDeviceOrientation(true)">Turn On</button> <button class="turn-off hide" onclick="javascript:turnOnDeviceOrientation(false)">Turn Off</button></li>
-      <li class="vibrate-supported">Vibration <button onclick="javascript:vibrateDevice()">Vibrate Device</button> <span class="vibrate">vibrating...</span></li>
-      <li class="ambient-light">Ambient Light Adjustment <button class="turn-on" onclick="javascript:turnOnAmbientLightAdjustment(true)">Turn On</button> <button class="turn-off hide" onclick="javascript:turnOnAmbientLightAdjustment(false)">Turn Off</button></li>
+      <li class="vibrate-supported hide">Vibration <button onclick="javascript:vibrateDevice()">Vibrate Device</button> <span class="vibrate">vibrating...</span></li>
+      <li class="ambient-light">Ambient Light Adjustment <button class="turn-on" onclick="javascript:turnOnAmbientLightAdjustment(true)">Turn On</button> <button class="turn-off hide" onclick="javascript:turnOnAmbientLightAdjustment(false)">Turn Off</button>
+        <p>Once you turn it on, try turning the lights on or off and watch this page change between white and black.</p>
+      </li>
 <!--       <li>Proximity <button></button></li> -->
-      <li class="battery-supported">Battery Status <button onclick="javascript:showBatteryStatus()">Show Battery Status</button> <span></span></li>
+      <li class="battery-supported hide">Battery Status <button onclick="javascript:showBatteryStatus()">Show Battery Status</button> <span></span></li>
     </ul>
   </section>
 
@@ -117,25 +119,25 @@
     //   level: 0.34
     // };
 
-    if (!navigator.battery) {
+    if (navigator.battery) {
       // battery API not supported
-      $(".battery-supported").addClass("hide");
+      $(".battery-supported").removeClass("hide");
     }
 
     // enable geolocation support
     if ("geolocation" in navigator) {
       // geolocation is available
+      $(".geolocation-supported").removeClass("hide");
     } else {
       // geolocation IS NOT available
-      $(".geolocation-supported").addClass("hide");
     }
 
     // enable vibration support
     navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
-    if (!navigator.vibrate) {
+    if (navigator.vibrate) {
       // vibration API not supported
-      $(".vibrate-supported").addClass("hide");
+      $(".vibrate-supported").removeClass("hide");
     }
   </script>
 
