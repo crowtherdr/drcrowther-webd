@@ -1,34 +1,44 @@
-  <section class="container-fluid">
+  <section class="container-fluid device-access light-theme">
     <h2>HTML Device Access (if an option doesn't show, the device doesn't allow it)</h2>
+    <p>Firefox seems to work best on a desktop/laptop.</p>
     <ul class="bulleted">
       <li>Touch Events <button></button></li>
       <li>Geolocation <button></button></li>
       <li>Device Orientation <button></button></li>
       <li class="vibrate-supported">Vibration <button onclick="javascript:vibrateDevice()">Vibrate Device</button> <span class="vibrate">vibrating...</span></li>
-      <li>Ambient Light Adjustment<!--  <button class="" onclick="javascript:turnOnAmbientLightAdjustment(true)">Turn On</button> <button class="" onclick="javascript:turnOnAmbientLightAdjustment(false)">Turn Off</button> --></li>
+      <li class="ambient-light">Ambient Light Adjustment <button class="turn-on" onclick="javascript:turnOnAmbientLightAdjustment(true)">Turn On</button> <button class="turn-off hide" onclick="javascript:turnOnAmbientLightAdjustment(false)">Turn Off</button></li>
       <li>Proximity <button></button></li>
       <li class="battery-supported">Battery Status <button onclick="javascript:showBatteryStatus()">Show Battery Status</button> <span class="batteryStatus"></span></li>
     </ul>
   </section>
 
   <script>
-    function adjustToAmbientLighting(lightEvent) {
-      console.log(lightEvent.value);
+    function adjustToAmbientLighting(event) {
+      var ambientLightValue = event.value;
+
+      console.log(ambientLightValue);
+
+      if (ambientLightValue < 35) {
+        $(".device-access").removeClass('light-theme');
+        $(".device-access").addClass('dark-theme');
+      }
+      else {
+        $(".device-access").addClass('light-theme');
+        $(".device-access").removeClass('dark-theme');
+      }
     }
 
     function turnOnAmbientLightAdjustment(turnOn) {
       var turnOn = turnOn || false;
 
       if (turnOn) {
-        window.addEventListener('devicelight', function(event) {
-          adjustToAmbientLighting(event);
-        }, true);
+        window.addEventListener('devicelight', adjustToAmbientLighting);
       }
       else {
-        window.removeEventListener('devicelight', function(event) {
-          adjustToAmbientLighting(event);
-        }, true);
+        window.removeEventListener('devicelight', adjustToAmbientLighting);
       }
+      $(".ambient-light .turn-on").toggleClass('hide');
+      $(".ambient-light .turn-off").toggleClass('hide');
     }
 
     function showBatteryStatus() {

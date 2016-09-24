@@ -120,3 +120,23 @@ body.portfolio-app {
 .portfolio-app .vibrate-supported span.vibrate.vibrating {
   display: block;
 }
+
+.portfolio-app .device-access.light-theme {
+  background-color: #fff;
+  color: #333;
+}
+
+.portfolio-app .device-access.light-theme button {
+  background-color: inherit;
+  color: inherit;
+}
+
+.portfolio-app .device-access.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+.portfolio-app .device-access.dark-theme button {
+  background-color: inherit;
+  color: inherit;
+}
