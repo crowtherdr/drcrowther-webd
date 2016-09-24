@@ -2,18 +2,18 @@
     <h2>HTML Device Access (if an option doesn't show, the device doesn't allow it)</h2>
     <p>Firefox seems to work best on a desktop/laptop.</p>
     <ul class="bulleted">
-      <li>Touch Events <button></button></li>
-      <li>Geolocation <button></button></li>
-      <li>Device Orientation <button></button></li>
+<!--       <li>Touch Events <button></button></li> -->
+      <li class="geolocation-supported">Geolocation <button onclick="javascript:getLocation()">Get location</button> <span></span></li>
+      <li class="device-orientation">Device Orientation <button class="turn-on" onclick="javascript:turnOnDeviceOrientation(true)">Turn On</button> <button class="turn-off hide" onclick="javascript:turnOnDeviceOrientation(false)">Turn Off</button></li>
       <li class="vibrate-supported">Vibration <button onclick="javascript:vibrateDevice()">Vibrate Device</button> <span class="vibrate">vibrating...</span></li>
       <li class="ambient-light">Ambient Light Adjustment <button class="turn-on" onclick="javascript:turnOnAmbientLightAdjustment(true)">Turn On</button> <button class="turn-off hide" onclick="javascript:turnOnAmbientLightAdjustment(false)">Turn Off</button></li>
-      <li>Proximity <button></button></li>
-      <li class="battery-supported">Battery Status <button onclick="javascript:showBatteryStatus()">Show Battery Status</button> <span class="batteryStatus"></span></li>
+<!--       <li>Proximity <button></button></li> -->
+      <li class="battery-supported">Battery Status <button onclick="javascript:showBatteryStatus()">Show Battery Status</button> <span></span></li>
     </ul>
   </section>
 
   <script>
-    function adjustToAmbientLighting(event) {
+    function adjustAmbientLighting(event) {
       var ambientLightValue = event.value;
 
       console.log(ambientLightValue);
@@ -32,13 +32,57 @@
       var turnOn = turnOn || false;
 
       if (turnOn) {
-        window.addEventListener('devicelight', adjustToAmbientLighting);
+        window.addEventListener('devicelight', adjustAmbientLighting);
       }
       else {
-        window.removeEventListener('devicelight', adjustToAmbientLighting);
+        window.removeEventListener('devicelight', adjustAmbientLighting);
       }
       $(".ambient-light .turn-on").toggleClass('hide');
       $(".ambient-light .turn-off").toggleClass('hide');
+    }
+
+    function reactToDeviceOrientation(event) {
+      var deviceOrientation = {
+        absolute: event.absolute || "",
+        alpha: event.alpha || "",
+        beta: event.beta || "",
+        gamma: event.gamma || ""
+      };
+
+      console.log(deviceOrientation);
+      $(".device-orientation span").html("Device is now: " + deviceOrientation.absolute);
+    }
+
+    function turnOnDeviceOrientation(turnOn) {
+      var turnOn = turnOn || false;
+
+      if (turnOn) {
+        window.addEventListener('devicelight', reactToDeviceOrientation);
+      }
+      else {
+        window.removeEventListener('devicelight', reactToDeviceOrientation);
+      }
+      $(".device-orientation .turn-on").toggleClass('hide');
+      $(".device-orientation .turn-off").toggleClass('hide');
+    }
+
+    function showLocation(latitude, longitude) {
+      var latitude = latitude || "";
+      var longitude = longitude || "";
+
+      console.log("Latitude: ", latitude);
+      console.log("Longitude: ", longitude);
+
+      $(".geolocation-supported span").html("Latitude: " + latitude + " / Longitude: " + longitude);
+      window.setTimeout(function() {
+        $(".geolocation-supported span").html("");
+      }, 5000);
+    }
+
+    function getLocation() {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        showLocation(position.coords.latitude, position.coords.longitude);
+      });
     }
 
     function showBatteryStatus() {
@@ -64,14 +108,7 @@
       }, 1000);
     }
 
-    // enable vibration support
-    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-
-    if (!navigator.vibrate) {
-      // vibration API not supported
-      $(".vibrate-supported").addClass("hide");
-    }
-
+    // enable battery support
     navigator.battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery || navigator.msBattery;
 
     // navigator.battery = {
@@ -82,6 +119,22 @@
     if (!navigator.battery) {
       // battery API not supported
       $(".battery-supported").addClass("hide");
+    }
+
+    // enable geolocation support
+    if ("geolocation" in navigator) {
+      // geolocation is available
+    } else {
+      // geolocation IS NOT available
+      $(".geolocation-supported").addClass("hide");
+    }
+
+    // enable vibration support
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+
+    if (!navigator.vibrate) {
+      // vibration API not supported
+      $(".vibrate-supported").addClass("hide");
     }
   </script>
 
