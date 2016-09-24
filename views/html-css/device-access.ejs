@@ -1,17 +1,50 @@
   <section class="container-fluid">
-    <h2>HTML - Device Access</h2>
+    <h2>HTML Device Access (if an option doesn't show, the device doesn't allow it)</h2>
     <ul class="bulleted">
       <li>Touch Events <button></button></li>
       <li>Geolocation <button></button></li>
       <li>Device Orientation <button></button></li>
       <li class="vibrate-supported">Vibration <button onclick="javascript:vibrateDevice()">Vibrate Device</button> <span class="vibrate">vibrating...</span></li>
-      <li>Ambient Light <button>Turn On</button></li>
+      <li>Ambient Light Adjustment<!--  <button class="" onclick="javascript:turnOnAmbientLightAdjustment(true)">Turn On</button> <button class="" onclick="javascript:turnOnAmbientLightAdjustment(false)">Turn Off</button> --></li>
       <li>Proximity <button></button></li>
-      <li>Battery Status <button>Show Battery Status</button></li>
+      <li class="battery-supported">Battery Status <button onclick="javascript:showBatteryStatus()">Show Battery Status</button> <span class="batteryStatus"></span></li>
     </ul>
   </section>
 
   <script>
+    function adjustToAmbientLighting(lightEvent) {
+      console.log(lightEvent.value);
+    }
+
+    function turnOnAmbientLightAdjustment(turnOn) {
+      var turnOn = turnOn || false;
+
+      if (turnOn) {
+        window.addEventListener('devicelight', function(event) {
+          adjustToAmbientLighting(event);
+        }, true);
+      }
+      else {
+        window.removeEventListener('devicelight', function(event) {
+          adjustToAmbientLighting(event);
+        }, true);
+      }
+    }
+
+    function showBatteryStatus() {
+      var batteryStatus = navigator.battery.charging;
+      var batteryLevelText = Math.floor(navigator.battery.level * 100) + "%";
+      var batteryStatusText = (batteryStatus ? "charging..." : "discharging...");
+
+      console.log( "battery level: ", batteryLevelText);
+      console.log( "device is ",  batteryStatusText);
+
+      $(".battery-supported span").html(batteryLevelText + " " + batteryStatusText);
+      window.setTimeout(function() {
+        $(".battery-supported span").html("");
+      }, 1000);
+    }
+
     function vibrateDevice() {
       console.log("vibrating");
       navigator.vibrate(1000);
@@ -27,6 +60,18 @@
     if (!navigator.vibrate) {
       // vibration API not supported
       $(".vibrate-supported").addClass("hide");
+    }
+
+    navigator.battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery || navigator.msBattery;
+
+    // navigator.battery = {
+    //   charging: true,
+    //   level: 0.34
+    // };
+
+    if (!navigator.battery) {
+      // battery API not supported
+      $(".battery-supported").addClass("hide");
     }
   </script>
 

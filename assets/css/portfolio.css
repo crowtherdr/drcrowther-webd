@@ -113,6 +113,7 @@ body.portfolio-app {
   fill: red;
 }
 
+.portfolio-app .battery-supported.hide,
 .portfolio-app .vibrate-supported span.vibrate {
   display: none;
 }
