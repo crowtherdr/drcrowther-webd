@@ -223,4 +223,44 @@ body.portfolio-app {
 .portfolio-app .border-example li span.circle p {
   padding-top: 100%;
 }
+
+.portfolio-app .too-small {
+  display: none;
+}
+/* End examples-css3-stable page */
+
+/* Start examples-css3-stable page */
+@media screen and (max-width: 300px) {
+  body.portfolio-app.cssStableExamples {
+    width: 100px;
+  }
+
+  body.portfolio-app .main-content {
+    display: none;
+  }
+
+  body.portfolio-app .too-small {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    left: 50%;
+    position: absolute;
+    height: 200px;
+    top: 0;
+    width: 200px;
+  }
+
+  body.portfolio-app .too-small p {
+    color: #fff;
+    display: block;
+    margin-top: 30%;
+    text-align: center;
+    font-size: 26px;
+  }
+}
+
+@media print {
+  body.portfolio-app.cssStableExamples {
+    width: 100px;
+  }
+}
 /* End examples-css3-stable page */

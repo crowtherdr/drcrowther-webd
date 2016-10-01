@@ -1,4 +1,4 @@
-  <section class="container-fluid">
+  <section class="container-fluid main-content">
     <h2>CSS3 "Stable" Examples</h2>
     <p>My examples of my <a href="/html-css/examples">HTML/CSS production pages</a> include many CSS "Stable" examples. Below are examples of "Stable" CSS that are not in those examples.</p>
     <ul class="bulleted">
@@ -47,7 +47,11 @@
         <h3><a href="#" data-toggle="collapse" data-target="#conditionalRules" aria-expanded="false" aria-controls="conditionalRules">Conditional Rules Level 3</a></h3>
         <div class="collapse" id="conditionalRules">
           <div class="well">
-            ...
+            <p>This page has CSS conditional rules for the screen width and for print.</p>
+            <ul class="bulleted">
+              <li>Squeeze the browser width to see the content disappear and a message disappear.</li>
+              <li>Do a print preview to see the content in a narrower column.</li>
+            </ul>
           </div>
         </div>
       </li>
@@ -76,6 +80,9 @@
         </div>
       </li>
     </ul>
+  </section>
+  <section class="too-small">
+    <p>Aaahh! I'm too small!</p>
   </section>
 
 <%- contentFor('pageName') %>
