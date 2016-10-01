@@ -32,6 +32,10 @@ app.get('/html-css/device-access', function(request, response){
   response.render("html-css/device-access", { layout:'layout.ejs' });
 });
 
+app.get('/html-css/examples-css3-stable', function(request, response){
+  response.render("html-css/examples-css3-stable", { layout:'layout.ejs' });
+});
+
 app.get('/javascript/examples', function(request, response){
   response.render("javascript/examples", { layout:'layout.ejs' });
 });

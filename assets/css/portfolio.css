@@ -43,6 +43,7 @@ body.portfolio-app {
   float: right;
 }
 
+/* Start form-example page */
 .portfolio-app form {
   margin-bottom: 60px;
 }
@@ -64,7 +65,9 @@ body.portfolio-app {
   margin-bottom: 12px;
   width: 74%;
 }
+/* End form-example page */
 
+/* Begin srcset-svg page */
 .portfolio-app.scrsetSVGExamples ol li {
   margin-bottom: 12px;
 }
@@ -112,7 +115,9 @@ body.portfolio-app {
 .portfolio-app .color .cls-2 {
   fill: red;
 }
+/* End srcset-svg page */
 
+/* Begin Device access page */
 .portfolio-app .battery-supported.hide,
 .portfolio-app .vibrate-supported span.vibrate {
   display: none;
@@ -140,3 +145,82 @@ body.portfolio-app {
   background-color: inherit;
   color: inherit;
 }
+/* End Device access page */
+
+/* Begin examples-css3-stable page */
+.portfolio-app .linear-gradient li,
+.portfolio-app .border-example li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-app .border-example li {
+  justify-content: flex-start;
+}
+
+.portfolio-app .linear-gradient span,
+.portfolio-app .border-example span {
+  background: #dfdfdf;
+  display: block;
+  height: 160px;
+  text-align: center;
+  width: 160px;
+}
+
+.portfolio-app .linear-gradient span p,
+.portfolio-app .border-example span p {
+  padding-top: 40%;
+  font-weight: bold;
+}
+
+.portfolio-app .linear-gradient .top-to-bottom {
+  background: linear-gradient(blue, yellow);
+}
+
+.portfolio-app .linear-gradient .left-to-right {
+  background: linear-gradient(to right, blue, yellow);
+}
+
+.portfolio-app .linear-gradient .diagonal-to-right {
+  background: linear-gradient(to bottom right, blue, yellow);
+}
+
+.portfolio-app .linear-gradient .angle {
+  background: linear-gradient(25deg, blue, yellow);
+}
+
+.portfolio-app .linear-gradient .multiple-stops {
+  background: linear-gradient(red, yellow, blue);
+}
+
+.portfolio-app .border-example li span {
+  margin-right: 100px;
+}
+
+.portfolio-app .border-example li .rounded-corners-color {
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+.portfolio-app .border-example li span.oval {
+  background: none;
+  border: 4px solid blue;
+  border-radius: 50%;
+  height: 100px;
+  margin-top: 30px;
+}
+
+.portfolio-app .border-example li span.oval p {
+  padding-top: 24%;
+}
+
+.portfolio-app .border-example li .circle {
+  background: url('/img/casual-me.jpg') 50% no-repeat;
+  background-size: 180px;
+  border-radius: 100%;
+}
+
+.portfolio-app .border-example li span.circle p {
+  padding-top: 100%;
+}
+/* End examples-css3-stable page */

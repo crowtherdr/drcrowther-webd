@@ -58,6 +58,13 @@ pageName = pageName.trim();
 <% } %>
               <a href="/html-css/device-access">Device Access Examples</a>
             </li>
+<% if (pageName === "cssStableExamples") { %>
+            <li class="active">
+<% } else { %>
+            <li>
+<% } %>
+              <a href="/html-css/examples-css3-stable">CSS3 "Stable" Examples</a>
+            </li>
           </ul>
         </li>
       </ul>
