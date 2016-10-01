@@ -227,6 +227,16 @@ body.portfolio-app {
 .portfolio-app .too-small {
   display: none;
 }
+
+.portfolio-app .multicolumns {
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 1px solid #000;
+}
+
+.portfolio-app .multicolumns li {
+  vertical-align: top;
+}
 /* End examples-css3-stable page */
 
 /* Start examples-css3-stable page */
