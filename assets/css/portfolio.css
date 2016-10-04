@@ -237,6 +237,10 @@ body.portfolio-app {
 .portfolio-app .multicolumns li {
   vertical-align: top;
 }
+
+.portfolio-app .rem-example {
+  font-size: 1.6rem;
+}
 /* End examples-css3-stable page */
 
 /* Start examples-css3-stable page */

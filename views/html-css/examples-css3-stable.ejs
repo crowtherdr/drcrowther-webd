@@ -69,7 +69,13 @@
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#valuesAndUnits" aria-expanded="false" aria-controls="valuesAndUnits">Values and Units Level 3</a></h3>
         <div class="collapse" id="valuesAndUnits">
           <div class="well">
-            ...
+            <p>It used to be that we just used the measurements "px" and "%" for font-size and other CSS size rules. Many years ago we got excited about using "em" for styles that were a bit easier to adjust by just changing the top level size on the html or body tags.</p>
+            <p>Here are the current relative units: em, ex, ch, rem, vw, vh, vmin, and vmax. You can get an explanation of each here: <a href="http://www.w3schools.com/cssref/css_units.asp">http://www.w3schools.com/cssref/css_units.asp</a>. At FamilySearch.org we are using the "rem" measurement which is relative to the font-size of the root element.</p>
+            <p>The items in the following list have a font-size of 1.6rem:</p>
+            <ul class="rem-example">
+              <li>The default size of this page's html font-size is 10px. This results in a font-size of 16px for these items.</li>
+              <li>To see that the items' font-size changes to 25.6px when the font-size of the html is changes to 16px, <button onclick="document.getElementsByTagName('html')[0].style.fontSize='16px'">click here</button>.</li>
+            </ul>
           </div>
         </div>
       </li>
