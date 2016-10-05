@@ -82,8 +82,14 @@
       <li>
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cascadingAndInheritance" aria-expanded="false" aria-controls="cascadingAndInheritance">Cascading and Inheritance Level 3</a></h3>
         <div class="collapse" id="cascadingAndInheritance">
-          <div class="well">
-            ...
+          <div class="well cascading-inheritance">
+            <p>One of the new properties that affects cascading/inheritance is the "all" property. New value are the "initial" and "inherit" values.</p>
+            <ul>
+              <li>This will inherit the 18px font size and blue font color that is specified for the parent div element.</li>
+              <li class="initial-value">This will get the 18px font size from the parent div element, but the font color is set to "initial" so it will be black.</li>
+              <li class="inherit-value"></li>
+              <li class="all-property">This won't inherit anything from the immediate parent or any other parent because it has the property "all" set to "initial". It doesn't even have the margin or padding of an unordered list item.</li>
+            </ul>
           </div>
         </div>
       </li>

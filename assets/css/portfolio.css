@@ -241,6 +241,23 @@ body.portfolio-app {
 .portfolio-app .rem-example {
   font-size: 1.6rem;
 }
+
+.portfolio-app .cascading-inheritance {
+  color: blue;
+  font-size: 18px;
+}
+
+.portfolio-app .cascading-inheritance .initial-value {
+  color: initial;
+}
+
+.portfolio-app .cascading-inheritance .inherit-value {
+  font-size: inherit;
+}
+
+.portfolio-app .cascading-inheritance .all-property {
+  all: initial;
+}
 /* End examples-css3-stable page */
 
 /* Start examples-css3-stable page */
