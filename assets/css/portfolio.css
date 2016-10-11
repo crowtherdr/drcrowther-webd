@@ -295,3 +295,84 @@ body.portfolio-app {
   }
 }
 /* End examples-css3-stable page */
+
+/* Start examples-css3-testing page */
+.portfolio-app.cssTestingExamples .text-decoration-dashed-red a {
+  text-decoration: underline dashed red;
+}
+
+.portfolio-app.cssTestingExamples .text-decoration-dotted-green a {
+  text-decoration: underline dotted green;
+}
+
+.portfolio-app.cssTestingExamples .vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+.portfolio-app.cssTestingExamples .vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.portfolio-app.cssTestingExamples .left-shape-outside span {
+  float: left;
+  height: 5rem;
+  shape-outside: polygon(0 0, 100% 100%, 0 100%);
+  width: 2rem;
+}
+
+.portfolio-app.cssTestingExamples .left-shape-outside p {
+  width: 40%;
+}
+
+.portfolio-app.cssTestingExamples .left-right-shape-outside {
+  width: 40%;
+}
+
+.portfolio-app.cssTestingExamples .left-right-shape-outside p {
+  text-align: center;
+}
+
+.portfolio-app.cssTestingExamples .left-right-shape-outside .left-shape,
+.portfolio-app.cssTestingExamples .left-right-shape-outside .right-shape {
+  height: 6rem;
+  width: 8rem;
+}
+
+.portfolio-app.cssTestingExamples .left-right-shape-outside .left-shape {
+  float: left;
+  shape-outside: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.portfolio-app.cssTestingExamples .left-right-shape-outside .right-shape {
+  float: right;
+  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.portfolio-app.cssTestingExamples .circle-shape {
+  width: 35%;
+}
+
+.portfolio-app.cssTestingExamples .circle-shape .left-shape {
+  float: left;
+  height: 10rem;
+  shape-outside: circle(50%);
+  width: 9rem;
+}
+
+.portfolio-app.cssTestingExamples .circle-shape-image {
+  width: 35%;
+}
+
+.portfolio-app.cssTestingExamples .circle-shape-image .left-shape {
+  float: left;
+  shape-image-threshold: 0.1;
+  shape-margin: 0.857rem;
+  shape-outside: url("/img/html-css/oscar-with-glasses.png");
+}
+
+.portfolio-app.cssTestingExamples .mask-image img {
+  -webkit-mask-box-image: url(/img/html-css/star.svg) 35 repeat;
+  /*-webkit-mask: url(/img/html-css/star.jpg) top left / cover;*/
+}
+
+/* End examples-css3-testing page */

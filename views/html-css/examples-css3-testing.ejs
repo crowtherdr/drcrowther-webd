@@ -1,0 +1,151 @@
+  <section class="container-fluid main-content">
+    <h2>CSS3 "Testing" Examples</h2>
+    <p>Below are examples of "Testing" CSS.</p>
+    <ul class="bulleted">
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#backgroundsAndBorders" aria-expanded="false" aria-controls="backgroundsAndBorders">Flexible Box Layout</a></h3>
+        <div class="collapse in" id="backgroundsAndBorders">
+          <div class="well">
+            <p>The examples of backgrounds and borders may look familiar because they are also on the <a href="/html-css/examples-css3-stable">CSS3 "Stable" Examples</a> page. They are spaced and aligned using the CSS flexbox rules.
+            <ul class="linear-gradient">
+              <h4>Background: Linear gradient</h4>
+              <li>
+                <span class="top-to-bottom">
+                  <p>Top to bottom</p>
+                </span>
+                <span class="left-to-right">
+                  <p>Left to right</p>
+                </span>
+                <span class="diagonal-to-right">
+                  <p>Diagonal to right</p>
+                </span>
+                <span class="angle">
+                  <p>25 degree angle</p>
+                </span>
+                <span class="multiple-stops">
+                  <p>Multiple color stops</p>
+                </span>
+              </li>
+            </ul>
+            <ul class="border-example">
+              <h4>Background: Borders</h4>
+              <li>
+                <span class="rounded-corners-color">
+                  <p>Rounded corners with background color</p>
+                </span>
+                <span class="oval">
+                  <p>Empty oval</p>
+                </span>
+                <span class="circle">
+                  <p>Circle with image</p>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssTextDecorationModuleLevel3" aria-expanded="false" aria-controls="cssTextDecorationModuleLevel3">CSS Text Decoration Module Level 3</a></h3>
+        <div class="collapse" id="cssTextDecorationModuleLevel3">
+          <div class="well">
+            <p></p>
+            <ul class="bulleted">
+              <li class="text-decoration-dashed-red"><a href="javascript:;">This link has a red dashed underline if your browser supports styling the text-decoration.</a> (Try Firefox or Chrome with "experimental Web Platform features" turned on in chrome://flags)</li>
+              <li class="text-decoration-dotted-green"><a href="javascript:;">This link has a green dotted underline if your browser supports styling the text-decoration.</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssWritingModesLevel3" aria-expanded="false" aria-controls="cssWritingModesLevel3">CSS Writing Modes Level 3</a></h3>
+        <div class="collapse" id="cssWritingModesLevel3">
+          <div class="well">
+            <p></p>
+            <ul class="bulleted">
+              <li>This is in the default writing mode which is horizontal top to bottom.</li>
+              <li class="vertical-rl">This is in the vertical-rl writing mode which is vertical right to left and would be useful for non-English languages. For English it would likely be used for aesthetic reasons.</li>
+              <li class="vertical-lr">This is in the vertical-lr writing mode which is vertical left to right and would also be useful for non-English languages.</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssShapesLevel1" aria-expanded="false" aria-controls="cssShapesLevel1">CSS Shapes Level 1</a></h3>
+        <div class="collapse" id="cssShapesLevel1">
+          <div class="well">
+            <p>CSS Shapes provides rules for shaping text.</p>
+            <ul class="bulleted">
+              <li class="left-shape-outside">
+                <span></span>
+                <p>The shape rules work along with floats to provide a shape of text. For example, this text is next to an angled shape defined by the "shape-outside" rule and is floated left.</p>
+              </li>
+              <li class="left-right-shape-outside">
+                <span class="right-shape"></span>
+                <span class="left-shape"></span>
+                <p>And this text is next to angled shapes in both sides, defined by the "shape-outside" rule with one floated left and one floated right.</p>
+              </li>
+              <li class="circle-shape">
+                <span class="left-shape"></span>
+                <p>And this text is next to a circle on the left. In order to see the effect of this there has to be a lot of text. Again the shaped element has to be floated to the left or the right and the text aligns next to the shape.</p>
+              </li>
+              <li class="circle-shape-image">
+                <p><img class="left-shape" src="/img/html-css/oscar-with-glasses.png"/> The shape can even come from an image. The "shape-outside" rule basically says that a shape will be made outside of the image and you use the "shape-image-threshold" to specify the amount of opacity in the image to determine the shape outline. <a href="https://www.html5rocks.com/en/tutorials/shapes/getting-started/" target="demo_window">https://www.html5rocks.com/en/tutorials/shapes/getting-started/</a> is a great article for learning to do this and <a href="http://blogs.adobe.com/webplatform/2014/03/11/add-shape-and-depth-to-your-layout-with-photoshop-and-css-shapes/" target="demo_window"> explains how to prep the image.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssMaskingLevel1" aria-expanded="false" aria-controls="cssMaskingLevel1">CSS Masking Level 1</a></h3>
+        <div class="collapse" id="cssMaskingLevel1">
+          <div class="well">
+            <p></p>
+            <ul class="bulleted">
+              <li class="mask-image">
+                <p><img src="/img/html-css/oscar-with-glasses.png"/> Creating a mask for an image is a tricky right now and has poor support (from my experience). I got this mask to work in Chrome. Check out <a href="https://www.html5rocks.com/en/tutorials/masking/adobe/" target="demo_window">https://www.html5rocks.com/en/tutorials/masking/adobe/</a> for help with this.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssCounterStylesLevel3" aria-expanded="false" aria-controls="cssCounterStylesLevel3">CSS Counter Styles Level 3</a></h3>
+        <div class="collapse" id="cssCounterStylesLevel3">
+          <div class="well">
+            <p></p>
+            <ul class="bulleted">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssFragmentationLevel3" aria-expanded="false" aria-controls="cssFragmentationLevel3">CSS Fragmentation Level 3</a></h3>
+        <div class="collapse" id="cssFragmentationLevel3">
+          <div class="well">
+            <p></p>
+            <ul class="bulleted">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssGridLayoutLevel1" aria-expanded="false" aria-controls="cssGridLayoutLevel1">CSS Grid Layout Level 1</a></h3>
+        <div class="collapse" id="cssGridLayoutLevel1">
+          <div class="well">
+            <p></p>
+            <ul class="bulleted">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+<%- contentFor('pageName') %>
+cssTestingExamples
+
+<%- contentFor('cssTestingExamples') %>
+active
