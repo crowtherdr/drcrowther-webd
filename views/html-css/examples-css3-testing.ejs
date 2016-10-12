@@ -145,9 +145,41 @@
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssGridLayoutLevel1" aria-expanded="false" aria-controls="cssGridLayoutLevel1">CSS Grid Layout Level 1</a></h3>
         <div class="collapse" id="cssGridLayoutLevel1">
           <div class="well">
-            <p></p>
+            <p>I have been avoiding creating examples of CSS experimental rules that are not easily seen in a browser (without turning on special features). However, the grid layout feels like something that will have a big impact on how we style web pages and I am anxious to learn it now. However, this means that as of today (12 Oct 2016) you will have to turn on the support in Chrome or Firefox (see <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="demo_window">https://css-tricks.com/snippets/css/complete-guide-grid/</a> under "Basics and Browser Support") which may mean restarting your browser.</p>
             <ul class="bulleted">
-              <li></li>
+              <li class="explicit-grid">
+                <h4>This is a grid that is templated with named areas.</h4>
+                <div class="grid-template">
+                  <div class="top-left">Top left</div>
+                  <div class="top">Top</div>
+                  <div class="top-right">Top right</div>
+                  <div class="middle-left">Middle left</div>
+                  <div class="middle">Middle</div>
+                  <div class="middle-right">Middle right</div>
+                  <div class="bottom-left">Bottom left</div>
+                  <div class="bottom">Bottom</div>
+                  <div class="bottom-right">Bottom right</div>
+                </div>
+                <h4>This is a grid that is created with shorthand column and row properties.</h4>
+                <div class="grid-repeat">
+                  <div class="top-left">Top left</div>
+                  <div class="top">Top</div>
+                  <div class="top-right">Top right</div>
+                  <div class="middle-left">Middle left</div>
+                  <div class="middle">Middle</div>
+                  <div class="middle-right">Middle right</div>
+                  <div class="bottom-left">Bottom left</div>
+                  <div class="bottom">Bottom</div>
+                  <div class="bottom-right">Bottom right</div>
+                </div>
+                <h4>This is a grid that shows how a named template could be used to provide the layout for a web page.</h4>
+                <div class="grid-template-page">
+                  <div class="header">Header</div>
+                  <div class="body">Body</div>
+                  <div class="sidebar-right">Right Sidebar</div>
+                  <div class="footer">Footer</div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
