@@ -112,10 +112,16 @@
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssCounterStylesLevel3" aria-expanded="false" aria-controls="cssCounterStylesLevel3">CSS Counter Styles Level 3</a></h3>
         <div class="collapse" id="cssCounterStylesLevel3">
           <div class="well">
-            <p></p>
-            <ul class="bulleted">
-              <li></li>
-            </ul>
+            <p>This level of counter style introduces the "@counter-style" rule that allows you to define your own counter style for the CSS list-marker and generated content counters for ordered lists.</p>
+            <p>One example I thought looked useful was that for footnote markers. It lets you define the footnote symbols and then uses and repeats them as needed. (Here's another one you may need to try in Firefox.)</p>
+            <ol class="footnote-list">
+              <li>1st footnote</li>
+              <li>2nd footnote</li>
+              <li>3rd footnote</li>
+              <li>4th footnote</li>
+              <li>5th footnote</li>
+              <li>6th footnote</li>
+            </ol>
           </div>
         </div>
       </li>
@@ -123,9 +129,14 @@
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssFragmentationLevel3" aria-expanded="false" aria-controls="cssFragmentationLevel3">CSS Fragmentation Level 3</a></h3>
         <div class="collapse" id="cssFragmentationLevel3">
           <div class="well">
-            <p></p>
-            <ul class="bulleted">
-              <li></li>
+            <p>CSS Fragmentation refers to how breaks are controlled in the flow of text and involves the "break-before" and "break-after" properties. However, the experimental values of "region", "recto", "verso", and "avoid-region" do not have any browser support (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/break-after" target="demo_window">https://developer.mozilla.org/en-US/docs/Web/CSS/break-after</a>).</p>
+            <p>I was able to find a related CSS property that is experimental, but has browser support and that is "box-decoration-break." Its initial value is "slice" and it applies to the "background", "padding", "border", "border-image", "box-shadow", "margin" and "clip" properties.</p>
+            <ul class="bulleted box-decoration-break">
+              <li class="inline-example"><span>This inline element has<br>the default box-decoration-break.</span></li>
+              <li class="inline-example clone"><span>This inline element has<br>box-decoration-break set to "clone."</span></li>
+              <li class="block-example"><span>This block<br>element has<br>the default box-decoration-break.</span></li>
+              <li class="block-example clone"><span>This block<br>element has<br>box-decoration-break set to "clone."</span>
+              <li>According to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break" target="demo_window">https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break</a> the block clone example above should have each line in a pill-like container. Something must have changed in the implementation since they made their examples because even their live example does not look like the images in their description (<a href="https://mdn.mozillademos.org/files/8187/box-decoration-break-block.html" target="demo_window">https://mdn.mozillademos.org/files/8187/box-decoration-break-block.html</a>).</li></li>
             </ul>
           </div>
         </div>

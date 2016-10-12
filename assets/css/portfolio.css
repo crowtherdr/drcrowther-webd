@@ -375,4 +375,44 @@ body.portfolio-app {
   /*-webkit-mask: url(/img/html-css/star.jpg) top left / cover;*/
 }
 
+@counter-style footnote {
+  system: symbolic;
+  symbols: '*' ⁑ † ‡;
+  suffix: " ";
+}
+
+.portfolio-app.cssTestingExamples .footnote-list li {
+  list-style: footnote;
+}
+
+.portfolio-app.cssTestingExamples .box-decoration-break li.block-example span,
+.portfolio-app.cssTestingExamples .box-decoration-break li.inline-example span {
+  background: gray;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: -5px -5px 5px 0px blue;
+  line-height: 86px;
+  margin: 12px;
+  padding: 24px;
+}
+
+.portfolio-app.cssTestingExamples .box-decoration-break li.block-example span {
+  line-height: 12px;
+}
+
+.portfolio-app.cssTestingExamples .box-decoration-break li.block-example {
+  columns: 3;
+  line-height: 20px;
+}
+
+.portfolio-app.cssTestingExamples .box-decoration-break li.block-example span {
+  display: block;
+}
+
+.portfolio-app.cssTestingExamples .box-decoration-break li.inline-example.clone span,
+.portfolio-app.cssTestingExamples .box-decoration-break li.block-example.clone span {
+  -webkit-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 /* End examples-css3-testing page */
