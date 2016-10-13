@@ -40,6 +40,18 @@ app.get('/html-css/examples-css3-testing', function(request, response){
   response.render("html-css/examples-css3-testing", { layout:'layout.ejs' });
 });
 
+app.get('/html-css/examples-css3-refining', function(request, response){
+  response.render("html-css/examples-css3-refining", { layout:'layout.ejs' });
+});
+
+app.get('/html-css/examples-css3-revising', function(request, response){
+  response.render("html-css/examples-css3-revising", { layout:'layout.ejs' });
+});
+
+app.get('/html-css/examples-css3-exploring', function(request, response){
+  response.render("html-css/examples-css3-exploring", { layout:'layout.ejs' });
+});
+
 app.get('/javascript/examples', function(request, response){
   response.render("javascript/examples", { layout:'layout.ejs' });
 });
