@@ -527,3 +527,29 @@ body.portfolio-app {
   grid-area: footer;
 }
 /* End examples-css3-testing page */
+
+/* Start examples-css3-refining page */
+/* The animation code */
+@keyframes animation-example {
+  0% {transform: rotate(0deg);left: 0;top: 0;}
+  25% {transform: rotate(20deg);left:0;top: 20px;}
+  50% {transform: rotate(40deg);left: 100px;top: 100px;}
+  55% {transform: rotate(-60deg);left: 150px;top: 150px;}
+  70% {transform: rotate(30deg);left: 200px;top: 170px;}
+  100% {transform: rotate(-360deg);left: 0px;top: 0;}
+}
+
+/* The element to apply the animation to */
+.portfolio-app.cssRefiningExamples .css-animations .button-wrapper button {
+  height: 100px;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100px;
+}
+
+.portfolio-app.cssRefiningExamples .css-animations .animate-me {
+  animation-duration: 4s;
+  animation-name: animation-example;
+}
+/* End examples-css3-refining page */
