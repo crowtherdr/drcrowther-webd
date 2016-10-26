@@ -540,7 +540,8 @@ body.portfolio-app {
 }
 
 /* The element to apply the animation to */
-.portfolio-app.cssRefiningExamples .css-animations .button-wrapper button {
+.portfolio-app.cssRefiningExamples .button-wrapper button,
+.portfolio-app.cssRefiningExamples .target-element {
   height: 100px;
   left: 0;
   position: relative;
@@ -551,5 +552,60 @@ body.portfolio-app {
 .portfolio-app.cssRefiningExamples .css-animations .animate-me {
   animation-duration: 4s;
   animation-name: animation-example;
+}
+
+.portfolio-app.cssRefiningExamples .explanation {
+  width: 500px;
+}
+
+.portfolio-app.cssRefiningExamples .target-element {
+  background-color: yellow;
+  border: 1px solid black;
+  padding-top: 12px;
+  text-align: center;
+}
+
+.portfolio-app.cssRefiningExamples .css-transforms .target-element {
+  transform: rotate(30deg);
+  transform: scale(2, 2);
+  transform: skew(20deg, 10deg);
+}
+
+.portfolio-app.cssRefiningExamples .css-transforms .target-element.three-d {
+  background-color: orange;
+  transform: rotate3d(10, 20, 30, 30deg);
+}
+
+.portfolio-app.cssRefiningExamples .css-transitions .target-element {
+  transition: width 2s;
+}
+
+.portfolio-app.cssRefiningExamples .css-transitions .target-element:hover {
+  width: 300px;
+}
+
+:root {
+  --heading-color: green;
+  --paragraph-color: red;
+}
+
+.portfolio-app.cssRefiningExamples .cascading-variables h3 a {
+  color: var(--heading-color, blue);
+}
+
+.portfolio-app.cssRefiningExamples .cascading-variables p {
+  color: var(--paragraph-color, black);
+  background-color: var(--paragraph-background-color, yellow);
+}
+
+.portfolio-app.cssRefiningExamples .box-alignment .well {
+  border: 1px solid green;
+  display: box;
+}
+
+.portfolio-app.cssRefiningExamples .box-alignment .well p {
+  align-items: center;
+  border: 1px solid black;
+  width: 200px;
 }
 /* End examples-css3-refining page */

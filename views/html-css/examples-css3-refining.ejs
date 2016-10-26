@@ -7,38 +7,47 @@
         <div class="collapse in" id="cssAnimations">
           <div class="well">
             <p class="button-wrapper"><button onclick="animateMe();">Click to see this animate</button></p>
+            <p class="explanation">This animation includes transforms to rotate the button in 2D space and move it from location to another (also 2D). The actual animation includes the "keyframes" with the states of the button at each keyframe including a smooth transition along the way.</p>
           </div>
         </div>
       </li>
-      <li>
+      <li class="css-transforms">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssTransforms" aria-expanded="false" aria-controls="cssTransforms">CSS Transforms</a></h3>
         <div class="collapse" id="cssTransforms">
           <div class="well">
-            <p>Placeholder</p>
+            <p class="target-element">I am 2x larger and rotated 30 degrees and skewed.</p>
+            <p class="explanation">The transform here happens without animation. No clicking or other action is needed. The element is just transformed in that it is larger than its original size and is rotated. It is also skewed 20 degrees on the X and 10 degrees on the Y axis.</p>
+          </div>
+          <div class="well">
+            <p class="target-element three-d">I am rotated 50 degrees at the point (10, 20, 30).</p>
+            <p class="explanation">This transform affects the shape in the 3D space.</p>
           </div>
         </div>
       </li>
-      <li>
+      <li class="css-transitions">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssTransitions" aria-expanded="false" aria-controls="cssTransitions">CSS Transitions</a></h3>
         <div class="collapse" id="cssTransitions">
           <div class="well">
-            <p>Placeholder</p>
+            <p class="target-element">I will grow smoothly when hovered over.</p>
+            <p class="explanation">The transitions here happens with pure CSS.</p>
           </div>
         </div>
       </li>
-      <li>
+      <li class="cascading-variables">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssCascadingVariables" aria-expanded="false" aria-controls="cssCascadingVariables">CSS Cascading Variables</a></h3>
         <div class="collapse" id="cssCascadingVariables">
           <div class="well">
-            <p>Placeholder</p>
+            <p>Here CSS variables are being used to set the color of the heading and paragraph text. The idea is that you would name styles (--heading-color: #06c;) and then refer to them by their name (color: var(--main-color);) when you use them. When you refer to a variable to use it, you can also specify a default (for example: background-color: var(--paragraph-background-color, yellow)). This paragraph is using the previous example rule, but the variable "--paragraph-background-color" does not exist so the color defaults to yellow for the background.</p>
           </div>
         </div>
       </li>
-      <li>
+      <li class="box-alignment">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssBoxAlignmentModuleLevel3" aria-expanded="false" aria-controls="cssBoxAlignmentModuleLevel3">CSS Box Alignment Module Level 3</a></h3>
         <div class="collapse" id="cssBoxAlignmentModuleLevel3">
           <div class="well">
-            <p>Placeholder</p>
+            <p>Here is one box.</p>
+            <p>And another box.</p>
+            <p>And still another box.</p>
           </div>
         </div>
       </li>
