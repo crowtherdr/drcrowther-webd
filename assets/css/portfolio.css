@@ -613,6 +613,10 @@ body.portfolio-app {
   width: 200px;
 }
 
+.portfolio-app.cssRefiningExamples .box-alignment .well li::marker {
+  font-variant-numeric: tabular-nums;
+}
+
 .portfolio-app.cssRefiningExamples .box-alignment .well li:first-child p {
 }
 
@@ -624,3 +628,53 @@ body.portfolio-app {
   align-items: flex-end;
 }
 /* End examples-css3-refining page */
+
+/* Start examples-css3-revising page */
+@media print {
+  @page :left {
+    margin: 3cm 8cm 3cm 3cm;
+  }
+
+  @page :right {
+    margin: 3cm 3cm 3cm 8cm;
+  }
+}
+
+.portfolio-app.cssRevisingExamples .css-selectors li:not(.ignore-me) {
+  color: blue;
+  background-color: orange;
+}
+
+.portfolio-app.cssRevisingExamples .well {
+  overflow: hidden;
+}
+
+.portfolio-app.cssRevisingExamples .well button {
+  margin-bottom: 26px;
+}
+
+.portfolio-app.cssRevisingExamples .example {
+  height: 80px;
+  width: 200px;
+}
+
+.portfolio-app.cssRevisingExamples .overflow-hidden {
+  overflow: hidden;
+}
+
+.portfolio-app.cssRevisingExamples .overflow-clip {
+  overflow: clip;
+}
+
+.portfolio-app.cssRevisingExamples .display-module .example {
+  background-color: blue;
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+
+.portfolio-app.cssRevisingExamples .css-pseudo-elements input:placeholder-shown {
+  background-color: #000;
+  font-family: serif;
+}
+/* End examples-css3-revising page */
