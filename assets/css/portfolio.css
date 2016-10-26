@@ -598,14 +598,29 @@ body.portfolio-app {
   background-color: var(--paragraph-background-color, yellow);
 }
 
-.portfolio-app.cssRefiningExamples .box-alignment .well {
-  border: 1px solid green;
-  display: box;
+.portfolio-app.cssRefiningExamples .box-alignment .well ul {
+  align-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.portfolio-app.cssRefiningExamples .box-alignment .well p {
-  align-items: center;
+.portfolio-app.cssRefiningExamples .box-alignment .well li {
   border: 1px solid black;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  text-align: center;
   width: 200px;
+}
+
+.portfolio-app.cssRefiningExamples .box-alignment .well li:first-child p {
+}
+
+.portfolio-app.cssRefiningExamples .box-alignment .well li:nth-child(2) {
+  align-items: center;
+}
+
+.portfolio-app.cssRefiningExamples .box-alignment .well li:last-child {
+  align-items: flex-end;
 }
 /* End examples-css3-refining page */
