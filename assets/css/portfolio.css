@@ -687,7 +687,6 @@ body.portfolio-app {
 }
 
 .portfolio-app.cssExploringExamples .filter-effects img {
-  width: 100px;
 }
 
 .portfolio-app.cssExploringExamples .filter-effects .grayscale img {
@@ -714,8 +713,40 @@ body.portfolio-app.cssExploringExamples {
   counter-reset: example; /* Creates a example counter scope */
 }
 
+.portfolio-app.cssExploringExamples li.page-floats div.well {
+  float: left;
+}
+
+.portfolio-app.cssExploringExamples li.page-floats + li {
+  clear: both;
+}
+
 .portfolio-app.cssExploringExamples .generated-content .examples p:before {
   content: "Example " counter(example) ". ";
   counter-increment: example;  /* Add 1 to example */
+}
+
+.portfolio-app.cssExploringExamples .page-floats li {
+  width: 30%;
+}
+
+.portfolio-app.cssExploringExamples .page-floats .ltr {
+  direction: ltr;
+}
+
+.portfolio-app.cssExploringExamples .page-floats .rtl {
+  direction: rtl;
+}
+
+.portfolio-app.cssExploringExamples .page-floats li:first-child {
+  float: inline-start;
+}
+
+.portfolio-app.cssExploringExamples .page-floats li:nth-child(2) {
+  float: inline-start;
+}
+
+.portfolio-app.cssExploringExamples .page-floats li:last-child {
+  float: inline-end;
 }
 /* End examples-css3-exploring page */

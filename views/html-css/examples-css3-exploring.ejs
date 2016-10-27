@@ -21,22 +21,22 @@
             <p>Hurray! Finally, one of the features in the "Exploring" list that has good browser support. Below are examples of some of the image filters that are possible.</p>
             <ul class="bulleted">
               <li>
-                <p><img src="/img/html-css/oscar-in-dress.jpg" /> original</p>
+                <p><img src="/img/html-css/oscar-in-dress-100px.jpg" /> original</p>
               </li>
               <li class="grayscale">
-                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 100% grayscale</p>
+                <p><img src="/img/html-css/oscar-in-dress-100px.jpg" /> 100% grayscale</p>
               </li>
               <li class="grayscale-50">
-                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 50% grayscale</p>
+                <p><img src="/img/html-css/oscar-in-dress-100px.jpg" /> 50% grayscale</p>
               </li>
               <li class="blur">
-                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 2px blur (doesn't take much to blur)</p>
+                <p><img src="/img/html-css/oscar-in-dress-100px.jpg" /> 2px blur (doesn't take much to blur)</p>
               </li>
               <li class="invert">
-                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 100% invert</p>
+                <p><img src="/img/html-css/oscar-in-dress-100px.jpg" /> 100% invert</p>
               </li>
               <li class="sepia">
-                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 100% sepia</p>
+                <p><img src="/img/html-css/oscar-in-dress-100px.jpg" /> 100% sepia</p>
               </li>
             </ul>
           </div>
@@ -56,10 +56,35 @@
           </div>
         </div>
       </li>
-      <li>
+      <li class="page-floats">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssPageFloats" aria-expanded="false" aria-controls="cssPageFloats">CSS Page Floats</a></h3>
         <div class="collapse" id="cssPageFloats">
           <div class="well">
+            <p>Below are examples of the new "float" rule values "inline-start" and "inline-end". You will need to view the examples in <a href="https://www.mozilla.org/en-US/firefox/developer/" target="demo_window">Firefox Developer Edition</a>.</p>
+            <p>Which element appears on the left or the right with "inline-start" or "inline-end" depends on the direction specified for the text.</p>
+            <p>With "float: left;", the element would always be floated left. With "float: inline-start;" the element will be on the left if the text direction is left to right or on the right is the text direction is right to left.</p>
+            <ul class="ltr" dir="ltr">
+              <li>
+                <p>This is the 1st element.</p>
+              </li>
+              <li>
+                <p>This is the 2nd element.</p>
+              </li>
+              <li>
+                <p>This is the 3rd element.</p>
+              </li>
+            </ul>
+            <ul class="rtr" dir="rtl">
+              <li>
+                <p>This is the 1st element.</p>
+              </li>
+              <li>
+                <p>This is the 2nd element.</p>
+              </li>
+              <li>
+                <p>This is the 3rd element.</p>
+              </li>
+            </ul>
           </div>
         </div>
       </li>
