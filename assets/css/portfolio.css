@@ -709,4 +709,13 @@ body.portfolio-app {
 .portfolio-app.cssExploringExamples .filter-effects .sepia img {
   filter: sepia(100%);
 }
+
+body.portfolio-app.cssExploringExamples {
+  counter-reset: example; /* Creates a example counter scope */
+}
+
+.portfolio-app.cssExploringExamples .generated-content .examples p:before {
+  content: "Example " counter(example) ". ";
+  counter-increment: example;  /* Add 1 to example */
+}
 /* End examples-css3-exploring page */
