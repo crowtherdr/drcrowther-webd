@@ -681,6 +681,32 @@ body.portfolio-app {
 
 
 /* Start examples-css3-exploring page */
-.portfolio-app.cssExploringExamples {
+.portfolio-app.cssExploringExamples .filter-effects p {
+/*  text-align: right;
+  width: 200px;*/
+}
+
+.portfolio-app.cssExploringExamples .filter-effects img {
+  width: 100px;
+}
+
+.portfolio-app.cssExploringExamples .filter-effects .grayscale img {
+  filter: grayscale(100%);
+}
+
+.portfolio-app.cssExploringExamples .filter-effects .grayscale-50 img {
+  filter: grayscale(50%);
+}
+
+.portfolio-app.cssExploringExamples .filter-effects .blur img {
+  filter: blur(2px);
+}
+
+.portfolio-app.cssExploringExamples .filter-effects .invert img {
+  filter: invert(100%);
+}
+
+.portfolio-app.cssExploringExamples .filter-effects .sepia img {
+  filter: sepia(100%);
 }
 /* End examples-css3-exploring page */

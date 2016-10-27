@@ -3,21 +3,42 @@
     <p>Below are examples of "Exploring" CSS (from <a href="https://www.w3.org/Style/CSS/current-work" target="demo_window">https://www.w3.org/Style/CSS/current-work</a>).</p>
     <ul class="bulleted">
       <li>
-        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssExploringNotImplemented" aria-expanded="false" aria-controls="cssExploringNotImplemented">Explored only</a></h3>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssExploringNotImplemented" aria-expanded="false" aria-controls="cssExploringNotImplemented">Explored only (no examples)</a></h3>
         <div class="collapse" id="cssExploringNotImplemented">
           <div class="well">
             <p>These are features in this category that I explored, but found out that they are not implemented in any or only a few browsers.</p>
-            <ul>
+            <ul class="bulleted">
               <li>Device Adaptation: Involves the use of the @viewport rule to help with browser size responsiveness: limited to very few mobile browsers. See <a href="https://www.w3.org/TR/css-device-adapt-1/" target="demo_window">https://www.w3.org/TR/css-device-adapt-1/</a></li>
               <li>Exclusions: Has "wrap-flow" and "wrap-through" rules to control the flow of text around or through other elements. See <a href="https://www.w3.org/TR/css3-exclusions/" target="demo_window">https://www.w3.org/TR/css3-exclusions/</a></li>
             </ul>
           </div>
         </div>
       </li>
-      <li>
-        <h3><a href="javascript:;" data-toggle="collapse" data-target="#Filter Effects" aria-expanded="false" aria-controls="Filter Effects">Filter Effects</a></h3>
-        <div class="collapse" id="Filter Effects">
+      <li class="filter-effects">
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssFilterEffects" aria-expanded="false" aria-controls="cssFilterEffects">Filter Effects</a></h3>
+        <div class="collapse in" id="cssFilterEffects">
           <div class="well">
+            <p>Hurray! Finally, one of the features in the "Exploring" list that has good browser support. Below are examples of some of the image filters that are possible.</p>
+            <ul class="bulleted">
+              <li>
+                <p><img src="/img/html-css/oscar-in-dress.jpg" /> original</p>
+              </li>
+              <li class="grayscale">
+                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 100% grayscale</p>
+              </li>
+              <li class="grayscale-50">
+                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 50% grayscale</p>
+              </li>
+              <li class="blur">
+                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 2px blur (doesn't take much to blur)</p>
+              </li>
+              <li class="invert">
+                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 100% invert</p>
+              </li>
+              <li class="sepia">
+                <p><img src="/img/html-css/oscar-in-dress.jpg" /> 100% sepia</p>
+              </li>
+            </ul>
           </div>
         </div>
       </li>
