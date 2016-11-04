@@ -10,6 +10,8 @@
             <ul class="bulleted">
               <li>Device Adaptation: Involves the use of the @viewport rule to help with browser size responsiveness: limited to very few mobile browsers. See <a href="https://www.w3.org/TR/css-device-adapt-1/" target="demo_window">https://www.w3.org/TR/css-device-adapt-1/</a></li>
               <li>Exclusions: Has "wrap-flow" and "wrap-through" rules to control the flow of text around or through other elements. See <a href="https://www.w3.org/TR/css3-exclusions/" target="demo_window">https://www.w3.org/TR/css3-exclusions/</a></li>
+              <li>Line grid: Line grid with its "line-snap" rule sounds like a great idea and should add a bit more sharpness to grid-based page layouts. From what I have read this feature will help align all elements to a baseline. See <a href="https://www.w3.org/TR/css-line-grid-1" target="demo_window">https://www.w3.org/TR/css-line-grid-1</a></li>
+              <li>Lists level 3: The :marker pseudo class seems like it would be useful and it eliminates the need for the :before pseudo class to add dynamic content to list items. For now, we will just have to use the :before pseudo class. See <a href="https://www.w3.org/TR/css-lists-3/#marker-pseudo-element" target="demo_window">https://www.w3.org/TR/css-lists-3/#marker-pseudo-element</a></li>
             </ul>
           </div>
         </div>
@@ -88,25 +90,37 @@
           </div>
         </div>
       </li>
-      <li>
+<!-- No browser support yet -->
+<!--       <li class="line-grid">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssLineGrid" aria-expanded="false" aria-controls="cssLineGrid">CSS Line Grid</a></h3>
         <div class="collapse" id="cssLineGrid">
           <div class="well">
-            <p>Placeholder</p>
+            <p>This text does not have the "line-snap" rule. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
+            <p class="line-snap">This text does have the "line-snap" rule. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p>
           </div>
         </div>
-      </li>
-      <li>
+      </li> -->
+<!-- No browser support yet -->
+<!--       <li class="list-items">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssListsLevel3" aria-expanded="false" aria-controls="cssListsLevel3">CSS Lists Level 3</a></h3>
         <div class="collapse" id="cssListsLevel3">
           <div class="well">
+            <p>List items are getting a ":marker" pseudo class to add custom list markers and allows them to be styled with common CSS rules.</p>
+            <ol class="example">
+              <li>List item 1.</li>
+              <li>List item 2.</li>
+              <li>List item 3.</li>
+            </ol>
           </div>
         </div>
-      </li>
-      <li>
+      </li> -->
+      <li class="positioned-layout">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssPositionedLayoutLevel3" aria-expanded="false" aria-controls="cssPositionedLayoutLevel3">CSS Positioned Layout Level 3</a></h3>
         <div class="collapse" id="cssPositionedLayoutLevel3">
           <div class="well">
+            <p>This feature now includes "position: sticky". Scroll the page and you will see the 'sticky' element stay in view within a parent element until that parent element scrolls out of view. (You may have to resize the window to be able to scroll the page enough.) You must specify a position (i.e. top, right, bottom, left) for the "sticky" value to have any effect.</p>
+            <p class="example sticky">Sticky</p>
+            <p class="example">Not sticky</p>
           </div>
         </div>
       </li>

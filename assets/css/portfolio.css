@@ -749,4 +749,39 @@ body.portfolio-app.cssExploringExamples {
 .portfolio-app.cssExploringExamples .page-floats li:last-child {
   float: inline-end;
 }
+
+/* No browser support yet */
+/*.portfolio-app.cssExploringExamples .line-grid p {
+  line-height: 30px;
+  text-decoration: underline;
+  width: 200px;
+}
+
+.portfolio-app.cssExploringExamples .line-grid .line-snap {
+  line-snap: baseline;
+}*/
+
+/* No browser support yet */
+/*.portfolio-app.cssExploringExamples .list-items li:marker {
+  content: "(" counter(list-item, lower-roman) ")";
+}
+
+.portfolio-app.cssExploringExamples .list-items li {
+  display: list-item;
+}*/
+
+.portfolio-app.cssExploringExamples .positioned-layout .well p.example {
+  background-color: yellow;
+  height: 120px;
+  text-align: center;
+  width: 120px;
+}
+
+
+.portfolio-app.cssExploringExamples .positioned-layout .well p.example.sticky {
+  background-color: purple;
+  color: white;
+  position: sticky;
+  top: 10px;
+}
 /* End examples-css3-exploring page */
