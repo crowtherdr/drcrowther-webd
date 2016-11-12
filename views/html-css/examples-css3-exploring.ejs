@@ -12,6 +12,7 @@
               <li>Exclusions: Has "wrap-flow" and "wrap-through" rules to control the flow of text around or through other elements. See <a href="https://www.w3.org/TR/css3-exclusions/" target="demo_window">https://www.w3.org/TR/css3-exclusions/</a></li>
               <li>Line grid: Line grid with its "line-snap" rule sounds like a great idea and should add a bit more sharpness to grid-based page layouts. From what I have read this feature will help align all elements to a baseline. See <a href="https://www.w3.org/TR/css-line-grid-1" target="demo_window">https://www.w3.org/TR/css-line-grid-1</a></li>
               <li>Lists level 3: The :marker pseudo class seems like it would be useful and it eliminates the need for the :before pseudo class to add dynamic content to list items. For now, we will just have to use the :before pseudo class. See <a href="https://www.w3.org/TR/css-lists-3/#marker-pseudo-element" target="demo_window">https://www.w3.org/TR/css-lists-3/#marker-pseudo-element</a></li>
+              <li>CSS Regions: The CSS Regions feature would provide a way for complex magazine layouts where you have content that needs to be spread across several elements with other elements intermingled. This would be nice to have because you could drop a blob of text in one element and then use that element as the source for the content that would spread through elements that provide a complex layout. See <a href="https://www.w3.org/TR/css-regions-1/" target="demo_window">https://www.w3.org/TR/css-regions-1/</a></li>
             </ul>
           </div>
         </div>
@@ -124,24 +125,53 @@
           </div>
         </div>
       </li>
-      <li>
+<!--       <li class="css-regions">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssRegions" aria-expanded="false" aria-controls="cssRegions">CSS Regions</a></h3>
         <div class="collapse" id="cssRegions">
           <div class="well">
+            <p>The CSS Regions feature provides a way for complex magazine layouts where you have content that needs to be spread across several elements with other elements intermingled.
+            <div id="content">Here is some text that will start in this box that will be followed by a box with an image in it. This is the text that should be in the other box after the image.</div>
+            <div class="region"></div>
+            <div class="image"><img src=""></div>
+            <div class="region"></div>
           </div>
         </div>
-      </li>
-      <li>
+      </li> -->
+      <li class="non-element-selectors">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#nonElementSelectors" aria-expanded="false" aria-controls="nonElementSelectors">Non-element Selectors</a></h3>
         <div class="collapse" id="nonElementSelectors">
           <div class="well">
+            <p>This feature sounds like another one that is very much in development. While researching what it is I came across the "::selection" pseudo selector. Here are examples for it.</p>
+            <ul class="examples">
+              <li class="highlight-green">Select this text and it will highlight in green.</li>
+              <li class="highlight-yellow">Select this text and it will highlight in yellow.</li>
+            </ul>
+            <p>The only CSS properties that will work with this selector are color, background, and text-shadow.
           </div>
         </div>
       </li>
-      <li>
+      <li class="inline-layout-module">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssInlineLayoutModuleLevel3" aria-expanded="false" aria-controls="cssInlineLayoutModuleLevel3">CSS Inline Layout Module Level 3</a></h3>
         <div class="collapse" id="cssInlineLayoutModuleLevel3">
           <div class="well">
+            <p>Here are examples of the values for the "dominant-baseline" property. It is a property for SVG images.</p>
+            <svg width=100% height=200>
+              <line x1=10 x2=920 y1=50.5 y2=50.5 style="stroke: green"></line>
+              <g class="terms" transform="translate(20,50.5)">
+                <text x=0 style="dominant-baseline: alphabetic;">alphabetic</text>
+                <text x=100 style="baseline-shift: -24%;">baseline shift</text>
+                <text x=200 style="dominant-baseline: ideographic;">ideographic</text>
+                <text x=300 style="dominant-baseline: hanging;">hanging</text>
+                <text x=400 style="dominant-baseline: mathematical;">mathematical</text>
+              </g>
+              <line x1=10 x2=920 y1=150.5 y2=150.5 style="stroke: green"></line>
+              <g class="terms" transform="translate(20,150.5)">
+                <text x=100 style="dominant-baseline: middle;">middle</text>
+                <text x=200 style="dominant-baseline: central;">central</text>
+                <text x=300 style="dominant-baseline: text-before-edge;">text-before-edge</text>
+                <text x=400 style="dominant-baseline: text-after-edge;">text-after-edge</text>
+              </g>
+            </svg>
           </div>
         </div>
       </li>

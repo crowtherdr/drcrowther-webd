@@ -784,4 +784,32 @@ body.portfolio-app.cssExploringExamples {
   position: sticky;
   top: 10px;
 }
+
+/*.portfolio-app.cssExploringExamples .css-regions .well #content {
+  flow-into: myFlow;
+}
+
+.portfolio-app.cssExploringExamples .css-regions .well .region {
+  flow-from: myFlow;
+}*/
+
+.portfolio-app.cssExploringExamples .non-element-selectors .examples .highlight-green::selection {
+  background-color: green;
+  color: white;
+}
+
+.portfolio-app.cssExploringExamples .non-element-selectors .examples .highlight-yellow::selection {
+  background-color: yellow;
+  color: black;
+}
+
+.portfolio-app.cssExploringExamples .inline-layout-module .examples .hanging {
+  dominant-baseline: hanging;
+}
+
+.portfolio-app.cssExploringExamples .inline-layout-module .examples .text-after-edge {
+}
+
+.portfolio-app.cssExploringExamples .inline-layout-module .examples .text-before-edge {
+}
 /* End examples-css3-exploring page */
