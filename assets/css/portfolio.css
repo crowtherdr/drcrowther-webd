@@ -554,10 +554,6 @@ body.portfolio-app {
   animation-name: animation-example;
 }
 
-.portfolio-app.cssRefiningExamples .explanation {
-  width: 500px;
-}
-
 .portfolio-app.cssRefiningExamples .target-element {
   background-color: yellow;
   border: 1px solid black;
