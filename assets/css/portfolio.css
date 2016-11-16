@@ -812,4 +812,9 @@ body.portfolio-app.cssExploringExamples {
 
 .portfolio-app.cssExploringExamples .inline-layout-module .examples .text-before-edge {
 }
+
+.portfolio-app.cssExploringExamples .motion-path .example #fish {
+  motion-path: path("M0 100 A 150 100, 0, 1, 1, 300 100 A 150 100, 0, 1, 1, 0 100 Z");
+  transform: translate(-25px,-25px);
+}
 /* End examples-css3-exploring page */

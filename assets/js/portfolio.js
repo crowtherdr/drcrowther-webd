@@ -24,5 +24,11 @@ var toggleBoxDisplay = function(container) {
   }
 }
 
+var animateFish = function() {
+  var positionKeyframes = [ {motionOffset: "0%"}, {motionOffset: "100%"} ];
+  var positionTiming = {duration: 12000, iterations: 3};
+  fish.animate(positionKeyframes, positionTiming);
+}
+
 $(document).ready(function () {
 });

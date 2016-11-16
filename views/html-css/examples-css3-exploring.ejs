@@ -175,10 +175,54 @@
           </div>
         </div>
       </li>
-      <li>
-        <h3><a href="javascript:;" data-toggle="collapse" data-target="#motionPathModuleLevel1" aria-expanded="false" aria-controls="motionPathModuleLevel1">Motion Path Module Level 1</a></h3>
+      <li class="motion-path">
+        <h3><a href="javascript:;" onclick="animateFish()" data-toggle="collapse" data-target="#motionPathModuleLevel1" aria-expanded="false" aria-controls="motionPathModuleLevel1">Motion Path Module Level 1</a></h3>
         <div class="collapse" id="motionPathModuleLevel1">
-          <div class="well">
+          <div class="well example">
+            <p>The "motion-path" property provides a way to animate an object along a path. This is already supported in Chrome possibly because Chrome is dropping SMIL.</p>
+            <p>Below is an SVG with an oval outline and a fish outline. The motion path (which is separate from the SVG oval) is defined in CSS and JavaScript is used to animate the fish along that path. (In this example, the fish will go around 3 times.)</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="-50 -50 400 300">
+            <defs>
+                <style>
+                  .oval-path {
+                    fill: none;
+                    stroke: #808080;
+                    stroke-width: 1px;
+                  }
+                  .fish {
+                    fill: #ababab;
+                    stroke: #000;
+                    stroke-width: 1px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path class="oval-path" d="M0 100
+                 A 150 100, 0, 1, 1, 300 100
+                 A 150 100, 0, 1, 1, 0 100
+                 Z"
+              />
+              <path id="fish" class="fish" d="M4.178,27.949c-2.1-2.882-7.087-16.8-1.891-17.385S17.413,19.221,22.47,20.831c4.437,1.412,5.179,1.362,8.371-.151A46.59,46.59,0,0,1,41.4,15.24C36.459,7.645,28.158,2.33,32.28,1.1,35.712,0.078,47.063-.336,58.945.313,75.81,1.239,82.3,6.423,85.207,12.444c17,5.256,24.122,19.681,23.782,22.584-0.14,1.214-12.39,9.621-31.964,10.049-2.836,5.962-6.559,13.318-10.008,15.175-4,2.154-6.358-.437-7.841-6.638a12.087,12.087,0,0,1,1.116-8.774c-1.633-.18-3.224-0.422-4.769-0.714-0.152.058-.318,0.114-0.5,0.17-3.243,1.016-18.11,1.091-18.759-.509a9.448,9.448,0,0,1-.31-6.684q-1.3-.7-2.469-1.4c-5.322-2.636-6.417-2.3-10.992-.931-4.6,1.37-14.74,15.652-17.394,12.8s-1.365-13.314-.95-15.526S6.281,30.829,4.178,27.949Z"/>
+            </svg>
+<!--             <svg xmlns="http://www.w3.org/2000/svg" width="109" height="61" viewBox="0 0 109 61" id="fish" class="fish">
+              <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+            <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+               <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                  <rdf:Description rdf:about=""/>
+               </rdf:RDF>
+            </x:xmpmeta>
+            <?xpacket end="w"?></metadata>
+            <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                    stroke: #000;
+                    stroke-width: 1px;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+            </svg> -->
           </div>
         </div>
       </li>
