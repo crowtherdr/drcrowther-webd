@@ -226,10 +226,21 @@
           </div>
         </div>
       </li>
-      <li>
-        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssTextModuleLevel4" aria-expanded="false" aria-controls="cssTextModuleLevel4">CSS Text Module Level 4</a></h3>
-        <div class="collapse" id="cssTextModuleLevel4">
+      <li class="css-basic-ui-module">
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssBasicUIModuleLevel4" aria-expanded="false" aria-controls="cssBasicUIModuleLevel4">CSS Basic User Interface Module Level 4</a></h3>
+        <div class="collapse" id="cssBasicUIModuleLevel4">
           <div class="well">
+            <p>Of the draft changes to the CSS Basic User Interface Module section, there are a couple that I think are interesting: "text-overflow: fade" which would be used to fade out text that is clipped by its element and two related rules for caret animation and caret shape where you could alternate the color of a cursor and change its shape.</p>
+            <p>Perhaps one of the most useful rules that is available in this CSS section is the "box-sizing" which helps standardize the box model across browsers. It lets you specify what is included in the size of an element: just the content or the content and the padding, border, and margin.</p>
+            <p>Examples of "box-sizing":</p>
+            <ul class="examples">
+              <li class="box-sizing-border-box">
+                The CSS height & width of this box includes everything.
+              </li>
+              <li class="box-sizing-content-box">
+                The size of this box does not include the padding, border, or margin. So it is bigger because the padding, border, and margin sizes are added on to the content size.
+              </li>
+            </ul>
           </div>
         </div>
       </li>

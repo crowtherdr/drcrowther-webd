@@ -817,4 +817,22 @@ body.portfolio-app.cssExploringExamples {
   motion-path: path("M0 100 A 150 100, 0, 1, 1, 300 100 A 150 100, 0, 1, 1, 0 100 Z");
   transform: translate(-25px,-25px);
 }
+
+.portfolio-app.cssExploringExamples .css-basic-ui-module .examples li {
+  border: 1px solid black;
+  height: 100px;
+  margin: 20px;
+  padding: 10px;
+  width: 250px;
+}
+
+.portfolio-app.cssExploringExamples .css-basic-ui-module .box-sizing-border-box {
+  box-sizing: border-box;
+
+}
+
+.portfolio-app.cssExploringExamples .css-basic-ui-module .box-sizing-content-box {
+  box-sizing: content-box;
+}
+
 /* End examples-css3-exploring page */
