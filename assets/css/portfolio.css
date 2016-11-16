@@ -835,4 +835,7 @@ body.portfolio-app.cssExploringExamples {
   box-sizing: content-box;
 }
 
+.portfolio-app.cssExploringExamples .css-color-module strong {
+  text-emphasis: "x" red;
+}
 /* End examples-css3-exploring page */

@@ -13,6 +13,11 @@
               <li>Line grid: Line grid with its "line-snap" rule sounds like a great idea and should add a bit more sharpness to grid-based page layouts. From what I have read this feature will help align all elements to a baseline. See <a href="https://www.w3.org/TR/css-line-grid-1" target="demo_window">https://www.w3.org/TR/css-line-grid-1</a></li>
               <li>Lists level 3: The :marker pseudo class seems like it would be useful and it eliminates the need for the :before pseudo class to add dynamic content to list items. For now, we will just have to use the :before pseudo class. See <a href="https://www.w3.org/TR/css-lists-3/#marker-pseudo-element" target="demo_window">https://www.w3.org/TR/css-lists-3/#marker-pseudo-element</a></li>
               <li>CSS Regions: The CSS Regions feature would provide a way for complex magazine layouts where you have content that needs to be spread across several elements with other elements intermingled. This would be nice to have because you could drop a blob of text in one element and then use that element as the source for the content that would spread through elements that provide a complex layout. See <a href="https://www.w3.org/TR/css-regions-1/" target="demo_window">https://www.w3.org/TR/css-regions-1/</a></li>
+              <li>
+                <p>CSS Paint API: The CSS Paint API sounds interesting and I wanted to learn it, but it is still just an idea. From what I have read it will allow you to paint the background, content, or highlight of a geometric shape.</p>
+                <p> I assume that this may provide flexibility for creating designs on web pages. I wonder what the performance overhead might be and whether or not it would be easier to just use SVG or other images. See <a href="https://www.w3.org/TR/css-paint-api-1/" target="demo_window">https://www.w3.org/TR/css-paint-api-1/</a></p>
+              </li>
+              <li>CSS Properties and Values API Level 1: This is another idea that is still in draft form. Its idea is to extend the CSS variables (see example on this page) idea into an API to allow developers to extend CSS. See <a href="https://www.w3.org/TR/css-properties-values-api-1/" target="demo_window">https://www.w3.org/TR/css-properties-values-api-1/</a></li>
             </ul>
           </div>
         </div>
@@ -244,24 +249,26 @@
           </div>
         </div>
       </li>
-      <li>
+<!--       <li>
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssPaintingApiLevel1" aria-expanded="false" aria-controls="cssPaintingApiLevel1">CSS Painting API Level 1</a></h3>
         <div class="collapse" id="cssPaintingApiLevel1">
           <div class="well">
           </div>
         </div>
-      </li>
-      <li>
+      </li> -->
+<!--       <li>
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssPropertiesValuesApiLevel1" aria-expanded="false" aria-controls="cssPropertiesValuesApiLevel1">CSS Properties and Values API Level 1</a></h3>
         <div class="collapse" id="cssPropertiesValuesApiLevel1">
           <div class="well">
           </div>
         </div>
-      </li>
-      <li>
+      </li> -->
+      <li class="css-color-module">
         <h3><a href="javascript:;" data-toggle="collapse" data-target="#cssColorModuleLevel4" aria-expanded="false" aria-controls="cssColorModuleLevel4">CSS Color Module Level 4</a></h3>
         <div class="collapse" id="cssColorModuleLevel4">
           <div class="well">
+            <p>Finally, we have an example of a color property you may never use, but I think is interesting. The ability to have an emphasis color (and character) of an element different than the main color.</p>
+            <p class="example">This sentence has a word that needs <strong>emphasis</strong>. If "text-emphasis" or "text-emphasis-color" is not supported in the browser you are using, you will just see the word "emphasis" in the current style for &lt;strong&gt;. Try using Firefox to see the effect of "text-emphasis." Then ask yourself: "Why would I use this?"</p>
           </div>
         </div>
       </li>
