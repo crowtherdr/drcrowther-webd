@@ -1,0 +1,51 @@
+  <section class="container-fluid main-content">
+    <h2>Web Components Examples</h2>
+    <ul class="bulleted">
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#ceExample" aria-expanded="false" aria-controls="ceExample">Custom Element Example</a></h3>
+        <div class="collapse in" id="ceExample">
+          <div class="well">
+            <p>This example works in Chrome.</p>
+            <p>The following photo is placed on the page with the use of a web component that I made. It's element is &lt;image-vignette&gt;. Its attributes are the "src" which is the path and file of the image. You can also specify the "height" and "width".</p>
+            <p>Of course you can just use the "img" tag and style it to look like this. However, this shows that you can make a web component and have all the HTML and CSS contained within the component.</p>
+            <image-vignette src="/img/casual-me.jpg" height="300" width="300"></image-vignette>
+            <p>The term "lifecycle callbacks", with regards to Web Components, refers to events that occur in the creation and lifetime of a web component. For example, events fire when a component is done loading and when its properties change.</p>
+            <p>I created the &lt;image-vignette&gt; in two different ways. The first way made use of an "attributeChangedCallback" to update the rendering. The second, and current, way does not have any implemented callbacks. I think the component was much easier to implement with the second method.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#example2" aria-expanded="false" aria-controls="example2">Type Extension Element</a></h3>
+        <div class="collapse" id="example2">
+          <div class="well">
+            <p>The idea of extending existing elements is to inherit all the capability and style of an element and add to it. Extending and element involves writing a class that extends a specific HTML element and not the generic "HTMLElement" and then adding the "is" attribute to the HTML tag with the name of the defined extension as in:</p>
+            <p>&lt;img is="vignette-img" src="/img/casual-me.jpg" /&gt;</p>
+            <p>However, I tried several methods that I read about on the Internet and could not get any of them to work. One comment I read stated that the "is" attribute might be deprecated.</p>
+            <p>From what I read not everyone is convinced that extending existing HTML elements is a good idea.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <!-- Modal -->
+<!--   <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Some Other Example</h4>
+        </div>
+        <div class="modal-body">
+          <p><img src="../img/javascript/crowtherdr-codewars-profile.jpg" width="570"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ -->
+
+<%- contentFor('pageName') %>
+wcExamples
+
+<%- contentFor('jsExamples') %>
+active

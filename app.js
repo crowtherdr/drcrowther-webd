@@ -56,6 +56,10 @@ app.get('/javascript/examples', function(request, response){
   response.render("javascript/examples", { layout:'layout.ejs' });
 });
 
+app.get('/web-components/examples', function(request, response){
+  response.render("web-components/examples", { layout:'layout.ejs' });
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
