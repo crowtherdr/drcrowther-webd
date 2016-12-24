@@ -55,23 +55,9 @@ class ImageVignette extends HTMLElement {
   }
 
   attributeChangedCallback(wcAttributeName, oldValue, newValue) {
-// console.log('wcAttributeName', wcAttributeName);
-    // switch (wcAttributeName) {
-    //   case "height":
-    //     this._height = newValue;
-    //     break;
-
-    //   case "src":
-    //     this._imagePath = newValue;
-    //     break;
-
-    //   case "width":
-    //     this._width = newValue;
-    //     break;
-    // }
-
     this._updateRendering(wcAttributeName, newValue);
   }
+
   connectedCallback() {
 console.log("LAST"); // Trying to figure out what this event means.
     this.addCSS();
@@ -81,6 +67,7 @@ console.log("LAST"); // Trying to figure out what this event means.
   get src() {
     return this._imagePath;
   }
+
   set src(v) {
     this.setAttribute("src", v);
   }
@@ -89,13 +76,14 @@ console.log("LAST"); // Trying to figure out what this event means.
   }
 
   _updateRendering(attributeName, attributeValue) {
-console.log("FIRST");
-    if (this.ownerDocument && this.ownerDocument.defaultView && !this.hasChildNodes()) {
+    if (this.ownerDocument && this.ownerDocument.defaultView && !this.shadowRoot) {
+
       this.imgNode = document.createElement("img");
-      this.appendChild(this.imgNode);
+      this.createShadowRoot();
+      this.shadowRoot.appendChild(this.imgNode);
     }
 
-    this.childNodes[0][attributeName] = attributeValue;
+    this.shadowRoot.childNodes[0][attributeName] = attributeValue;
   }
 }
 
@@ -180,6 +168,70 @@ customElements.define("image-vignette", ImageVignette);
 
 // customElements.define("vignette-img", VignetteImg, { extends: "img" });
 
+
+// var ImageVignette = Object.create(HTMLElement.prototype, {
+//   observedAttributes: {
+//     value: function() {
+//       return ["height", "src", "width"];
+//     }
+//   },
+
+//   createdCallback: {
+//     value: function() {
+// debugger;
+//       this.imgNode = document.createElement("img");
+//       this.createShadowRoot().appendChild(this.imgNode);
+//     }
+//   },
+
+//   attributeChangedCallback: {
+//     value: function(wcAttributeName, oldValue, newValue) {
+//       this._updateRendering(wcAttributeName, newValue);
+//     }
+//   },
+
+//   _updateRendering: {
+//     value: function(attributeName, attributeValue) {
+// console.log("FIRST");
+//       // if (this.ownerDocument && this.ownerDocument.defaultView && !this.hasChildNodes()) {
+//       //   this.imgNode = document.createElement("img");
+//       //   this.appendChild(this.imgNode);
+//       // }
+// debugger;
+//       this.shadowRoot.childNodes[0][attributeName] = attributeValue;
+//     }
+//   }
+// });
+// document.registerElement('image-vignette', {prototype: ImageVignette});
+
+
+
+var ImageVignetteT = Object.create(HTMLElement.prototype, {
+  createdCallback: {
+    value: function() {
+      var t = document.querySelector('#imgvtemplate');
+      var clone = document.importNode(t.content, true);
+      this.createShadowRoot().appendChild(clone);
+
+      this.setAttributes();
+    }
+  },
+
+  setAttributes: {
+    value: function() {
+      var imageVignetteAttributes = this.attributes;
+
+      for (var attrKey in imageVignetteAttributes) {
+          if (!isNaN(attrKey)) {
+            var obj = imageVignetteAttributes[attrKey];
+            this.shadowRoot.children[1][obj.name] = obj.value;
+          }
+      }
+
+    }
+  }
+});
+document.registerElement('image-vignetteT', {prototype: ImageVignetteT});
 
 $(document).ready(function () {
   var javascriptImageVignette = document.getElementById("JavascriptImageVignette") || null;

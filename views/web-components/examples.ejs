@@ -9,8 +9,41 @@
             <p>The following photo is placed on the page with the use of a web component that I made. It's element is &lt;image-vignette&gt;. Its attributes are the "src" which is the path and file of the image. You can also specify the "height" and "width".</p>
             <p>Of course you can just use the "img" tag and style it to look like this. However, this shows that you can make a web component and have all the HTML and CSS contained within the component.</p>
             <image-vignette src="/img/casual-me.jpg" height="300" width="300"></image-vignette>
+            <p>This is &lt;image-vignette&gt; which creates the HTML and attaches a CSS file (black border).</p>
+            <template id="imgvtemplate">
+              <style>
+                :host {
+                  border: 2px solid green;
+                  -moz-border-radius: 100%;
+                  -webkit-border-radius: 100%;
+                  border-radius: 100%;
+                  display: inline-block;
+                  overflow: hidden;
+                }
+
+                :host .fade {
+                    height: 100%;
+                    width: 100%;
+                    position:absolute;
+                    background: -webkit-linear-gradient(
+                      left,
+                      rgba(0,0,0,0.65) 0%,
+                      rgba(0,0,0,0) 20%,
+                      rgba(0,0,0,0) 80%,
+                      rgba(0,0,0,0.65) 100%
+                    );
+                }
+
+                :host img {
+                }
+              </style>
+              <img />
+            </template>
+            <image-vignetteT src="/img/casual-me.jpg" height="300" width="300"></image-vignetteT>
+            <p>This is &lt;image-vignetteT&gt; which uses an HTML template and :host CSS (green border).</p>
             <p>The term "lifecycle callbacks", with regards to Web Components, refers to events that occur in the creation and lifetime of a web component. For example, events fire when a component is done loading and when its properties change.</p>
             <p>I created the &lt;image-vignette&gt; in two different ways. The first way made use of an "attributeChangedCallback" to update the rendering. The second, and current, way does not have any implemented callbacks. I think the component was much easier to implement with the second method. However, it is missing the callback functions and does not update the attributes when added to the page using JavaScript.</p>
+            <p>&lt;image-vignetteT&gt; is the most self-contained implementation and uses callbacks.</p>
             <p>This instance of &lt;image-vignette&gt; was added using JavaScript:</p>
             <p id="JavascriptImageVignette"></p>
           </div>
