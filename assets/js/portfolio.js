@@ -154,8 +154,6 @@ customElements.define("image-vignette", ImageVignette);
 // // Define the new element
 // customElements.define('image-vignette', ImageVignette);
 
-
-
 // class VignetteImg extends HTMLImageElement {
 //   constructor() {
 //     super();
@@ -168,6 +166,25 @@ customElements.define("image-vignette", ImageVignette);
 
 // customElements.define("vignette-img", VignetteImg, { extends: "img" });
 
+document.registerElement('vignette-img',  {
+  extends: 'img',
+  prototype: Object.create(HTMLImageElement.prototype, {
+    createdCallback: {
+      value: function() {
+        this.style = 'border: 2px solid blue; -moz-border-radius: 100%; -webkit-border-radius: 100%; border-radius: 100%;';
+      }
+    },
+    attributeChangedCallback: {
+      value: function() {
+        this.style = 'border: 2px solid green; -moz-border-radius: 100%; -webkit-border-radius: 100%; border-radius: 100%;';
+      }
+    },
+    _updateTemplate: {
+      value: function(data) {
+      }
+    }
+  })
+});
 
 // var ImageVignette = Object.create(HTMLElement.prototype, {
 //   observedAttributes: {
@@ -204,8 +221,6 @@ customElements.define("image-vignette", ImageVignette);
 // });
 // document.registerElement('image-vignette', {prototype: ImageVignette});
 
-
-
 var ImageVignetteT = Object.create(HTMLElement.prototype, {
   createdCallback: {
     value: function() {
@@ -231,6 +246,7 @@ var ImageVignetteT = Object.create(HTMLElement.prototype, {
     }
   }
 });
+
 document.registerElement('image-vignetteT', {prototype: ImageVignetteT});
 
 $(document).ready(function () {

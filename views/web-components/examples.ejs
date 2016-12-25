@@ -54,9 +54,10 @@
         <div class="collapse" id="example2">
           <div class="well">
             <p>The idea of extending existing elements is to inherit all the capability and style of an element and add to it. Extending and element involves writing a class that extends a specific HTML element and not the generic "HTMLElement" and then adding the "is" attribute to the HTML tag with the name of the defined extension as in:</p>
-            <p>&lt;img is="vignette-img" src="/img/casual-me.jpg" /&gt;</p>
-            <p>However, I tried several methods that I read about on the Internet and could not get any of them to work. One comment I read stated that the "is" attribute might be deprecated.</p>
-            <p>From what I read not everyone is convinced that extending existing HTML elements is a good idea.</p>
+            <p><img id="VignetteImg" is="vignette-img" src="/img/casual-me.jpg" height="200" width="200" /></p>
+            <p>The image is shown using a plain &lt;img&gt; tag. The styling is added by extending the tag.</p>
+            <p>A limitation that I found with the &lt;img&gt; tag is that you cannot create a shadow root for it. I assume that would be the same for any tag that does not have a closing tag.</p>
+            <p>Thanks to <a href="http://norman-amy.github.io/assets/js/badges/wc-journeyman/github-wc-extended/index.html" target="_blank">norman-amy's example</a> for the help with this.
           </div>
         </div>
       </li>
