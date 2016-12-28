@@ -37,5 +37,9 @@
     "express": "^4.14.0",
     "express-ejs-layouts": "~2.2.0",
     "supervisor": "~0.11.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-vulcanize": "^6.1.0"
   }
 }
