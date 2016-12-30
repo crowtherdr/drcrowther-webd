@@ -50,14 +50,29 @@
         </div>
       </li>
       <li>
-        <h3><a href="javascript:;" data-toggle="collapse" data-target="#example2" aria-expanded="false" aria-controls="example2">Type Extension Element</a></h3>
-        <div class="collapse" id="example2">
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#typeExtensionElement" aria-expanded="false" aria-controls="typeExtensionElement">Type Extension Element</a></h3>
+        <div class="collapse" id="typeExtensionElement">
           <div class="well">
             <p>The idea of extending existing elements is to inherit all the capability and style of an element and add to it. Extending and element involves writing a class that extends a specific HTML element and not the generic "HTMLElement" and then adding the "is" attribute to the HTML tag with the name of the defined extension as in:</p>
             <p><img id="VignetteImg" is="vignette-img" src="/img/casual-me.jpg" height="200" width="200" /></p>
             <p>The image is shown using a plain &lt;img&gt; tag. The styling is added by extending the tag.</p>
             <p>A limitation that I found with the &lt;img&gt; tag is that you cannot create a shadow root for it. I assume that would be the same for any tag that does not have a closing tag.</p>
             <p>Thanks to <a href="http://norman-amy.github.io/assets/js/badges/wc-journeyman/github-wc-extended/index.html" target="_blank">norman-amy's example</a> for the help with this.
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#xtagExample" aria-expanded="false" aria-controls="xtagExample">X-Tag Example</a></h3>
+        <div class="collapse in" id="xtagExample">
+          <div class="well">
+            <p>Xtag is a JavaScript library that wraps the Web Components API to make web component development much faster.</p>
+            <p>Here is the x-clock tag example from <a href="http://x-tag.github.io/overview">http://x-tag.github.io/overview</a>: <x-clock></x-clock></p>
+            <p>And here is my image-vignette element written using x-tag:</p>
+            <p><x-image-vignette src="/img/casual-me.jpg" height="200" width="200"></x-image-vignette></p>
+            <p>It has a tap/click event that changes the border to a random color.</p>
+            <p>And here is my extension of the &lt;img&gt; tag using X-Tag:</p>
+            <p><img id="XVignetteImg" is="x-vignette-img" src="/img/casual-me.jpg" height="200" width="200" /></p>
+            <p>For consistency of code style and implementation, I really like the X-Tag library. Polymer also provides this consistency. Once one web component is completed, stamping out others can be done quickly.</p>
           </div>
         </div>
       </li>

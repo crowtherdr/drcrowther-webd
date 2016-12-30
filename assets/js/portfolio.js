@@ -59,7 +59,7 @@ class ImageVignette extends HTMLElement {
   }
 
   connectedCallback() {
-console.log("LAST"); // Trying to figure out what this event means.
+// console.log("LAST"); // Trying to figure out what this event means.
     this.addCSS();
     this._whenDoesThisFire();
   }
@@ -248,6 +248,91 @@ var ImageVignetteT = Object.create(HTMLElement.prototype, {
 });
 
 document.registerElement('image-vignetteT', {prototype: ImageVignetteT});
+
+
+xtag.register('x-clock', {
+  lifecycle: {
+    created: function(){
+      this.start();
+    }
+  },
+  methods: {
+    start: function(){
+      this.update();
+      this.xtag.interval = setInterval(this.update.bind(this), 1000);
+    },
+    stop: function(){
+      this.xtag.interval = clearInterval(this.xtag.interval);
+    },
+    update: function(){
+      this.textContent = new Date().toLocaleTimeString();
+    }
+  },
+  events: {
+    tap: function(){
+      if (this.xtag.interval) this.stop();
+      else this.start();
+    }
+  }
+});
+
+xtag.register('x-image-vignette', {
+  lifecycle: {
+    created: function(){
+      this.start();
+    }
+  },
+  methods: {
+    start: function(){
+      var t = document.querySelector('#imgvtemplate');
+      var clone = document.importNode(t.content, true);
+      this.createShadowRoot().appendChild(clone);
+
+      this.update();
+    },
+    stop: function(){
+    },
+    update: function(){
+      var imageVignetteAttributes = this.attributes;
+
+      for (var attrKey in imageVignetteAttributes) {
+          if (!isNaN(attrKey)) {
+            var obj = imageVignetteAttributes[attrKey];
+            this.shadowRoot.children[1][obj.name] = obj.value;
+          }
+      }
+    },
+    randomColor: function() {
+      return '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
+    }
+  },
+  events: {
+    tap: function(){
+      this.style.borderColor = this.randomColor();
+    }
+  }
+});
+
+xtag.register('x-vignette-img', {
+  extends: 'img',
+  lifecycle: {
+    created : function(){
+      this.style = 'border: 2px solid blue; -moz-border-radius: 100%; -webkit-border-radius: 100%; border-radius: 100%;';
+    }
+  },
+  methods: {
+    randomColor: function() {
+      return '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
+    }
+  },
+  events: {
+    tap: function(){
+      this.style.borderColor = this.randomColor();
+    }
+  }
+});
+
+
 
 $(document).ready(function () {
   var javascriptImageVignette = document.getElementById("JavascriptImageVignette") || null;
