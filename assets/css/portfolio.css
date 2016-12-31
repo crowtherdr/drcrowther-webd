@@ -26,6 +26,11 @@ body.portfolio-app {
   padding-bottom: 40px;
 }
 
+
+.portfolio-app ol.numbered {
+  list-style: decimal;
+}
+
 .portfolio-app ul.bulleted {
   list-style: initial;
 }
@@ -39,7 +44,7 @@ body.portfolio-app {
   margin-top: 90px;
 }
 
-.portfolio-app .img-wrapper.right {
+.portfolio-app .right {
   float: right;
 }
 
@@ -835,3 +840,6 @@ body.portfolio-app.cssExploringExamples {
   text-emphasis: "x" red;
 }
 /* End examples-css3-exploring page */
+
+/* Start Web Components examples page */
+/* End Web Components examples page */

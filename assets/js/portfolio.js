@@ -81,6 +81,7 @@ class ImageVignette extends HTMLElement {
       this.imgNode = document.createElement("img");
       this.createShadowRoot();
       this.shadowRoot.appendChild(this.imgNode);
+      this.className = "done";
     }
 
     this.shadowRoot.childNodes[0][attributeName] = attributeValue;

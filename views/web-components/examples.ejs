@@ -6,6 +6,7 @@
         <div class="collapse in" id="ceExample">
           <div class="well">
             <p>This example works in Chrome.</p>
+            <p>Note: The custom elements on this will show as a 100 pixel red square until they are resolved. This is to show that 'unresolved' elements can be styled to avoid a "flash of unresolved content". Ideally, you will style the elements to look as close as possible like their finished state.</p>
             <p>The following photo is placed on the page with the use of a web component that I made. It's element is &lt;image-vignette&gt;. Its attributes are the "src" which is the path and file of the image. You can also specify the "height" and "width".</p>
             <p>Of course you can just use the "img" tag and style it to look like this. However, this shows that you can make a web component and have all the HTML and CSS contained within the component.</p>
             <image-vignette src="/img/casual-me.jpg" height="300" width="300"></image-vignette>
@@ -73,6 +74,28 @@
             <p>And here is my extension of the &lt;img&gt; tag using X-Tag:</p>
             <p><img id="XVignetteImg" is="x-vignette-img" src="/img/casual-me.jpg" height="200" width="200" /></p>
             <p>For consistency of code style and implementation, I really like the X-Tag library. Polymer also provides this consistency. Once one web component is completed, stamping out others can be done quickly.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <h3><a href="javascript:;" data-toggle="collapse" data-target="#componentsPerformance" aria-expanded="false" aria-controls="componentsPerformance">Web Components and Performance</a></h3>
+        <div class="collapse" id="componentsPerformance">
+          <div class="well">
+            <p>There are at least 3 techniques related to improving performance for web page loading and for Web Components.</p>
+            <ol class="numbered">
+              <li>
+                <p>Adding the "async" attribute to &lt;link&gt; and &lt;script&gt; tags to prevent blocking. This portfolio site makes use of this attribute for some of these tags. However, you have to be careful because if a resource is not loaded before another resource needs it, especially in the case of JavaScript, you will get errors.</p>
+                <p>For example, for this page the X-Tag library does not have the "async" attribute on it to make sure it is available when the script in the page script file needs it.</p>
+              </li>
+              <li>
+                <p>Styling custom elements so they have the basic look that they will have once they are loaded will prevent a flash of unstyled content (FOUC).</p>
+                <p>As you reload this page, notice that the custom elements are a 100 pixel red square until they are resolved.</p>
+              </li>
+              <li>
+                <p>Element lazy loading.</p>
+                <p>One way to lazy load Polymer elements is to use the Polymer.Base.importHref function. Other techniques make use of the "async" attribute on the &lt;link&gt; and &lt;script&gt; and the Polymer "dom-if" attribute.</p>
+              </li>
+            </ol>
           </div>
         </div>
       </li>
