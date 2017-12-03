@@ -1,34 +1,34 @@
 var animateMe = function() {
-  $(".css-animations p.button-wrapper button").addClass("animate-me");
+  $('.css-animations p.button-wrapper button').addClass('animate-me');
   window.setTimeout(function() {
-    $(".css-animations p.button-wrapper button").removeClass("animate-me");
-  }, 4000)
-}
+    $('.css-animations p.button-wrapper button').removeClass('animate-me');
+  }, 4000);
+};
 
 var scrollContainer = function(container) {
   $(container).scrollTop(200);
-}
+};
 
 var changeToOverflow = function(container) {
-  $(container).css("overflow", "hidden");
-}
+  $(container).css('overflow', 'hidden');
+};
 
 var toggleBoxDisplay = function(container) {
   var container = $(container);
 
-  if (!container.css("box-supress") || container.css("box-supress") === "show") {
-    container.css("overflow", "hide");
+  if (!container.css('box-supress') || container.css('box-supress') === 'show') {
+    container.css('overflow', 'hide');
   }
   else {
-    container.css("overflow", "show");
+    container.css('overflow', 'show');
   }
-}
+};
 
 var animateFish = function() {
-  var positionKeyframes = [ {motionOffset: "0%"}, {motionOffset: "100%"} ];
+  var positionKeyframes = [ {motionOffset: '0%'}, {motionOffset: '100%'} ];
   var positionTiming = {duration: 12000, iterations: 3};
   fish.animate(positionKeyframes, positionTiming);
-}
+};
 
 // https://w3c.github.io/webcomponents/spec/custom/
 class ImageVignette extends HTMLElement {
@@ -37,7 +37,7 @@ class ImageVignette extends HTMLElement {
     this._imagePath = null;
   }
 
-  static get observedAttributes() { return ["height", "src", "width"]; }
+  static get observedAttributes() { return ['height', 'src', 'width']; }
 
   addCSS() {
     var cssId = 'ImageVignette';  // you could encode the css path itself to generate id..
@@ -59,7 +59,7 @@ class ImageVignette extends HTMLElement {
   }
 
   connectedCallback() {
-// console.log("LAST"); // Trying to figure out what this event means.
+// console.log('LAST'); // Trying to figure out what this event means.
     this.addCSS();
     this._whenDoesThisFire();
   }
@@ -69,7 +69,7 @@ class ImageVignette extends HTMLElement {
   }
 
   set src(v) {
-    this.setAttribute("src", v);
+    this.setAttribute('src', v);
   }
 
   _whenDoesThisFire() {
@@ -78,17 +78,17 @@ class ImageVignette extends HTMLElement {
   _updateRendering(attributeName, attributeValue) {
     if (this.ownerDocument && this.ownerDocument.defaultView && !this.shadowRoot) {
 
-      this.imgNode = document.createElement("img");
+      this.imgNode = document.createElement('img');
       this.createShadowRoot();
       this.shadowRoot.appendChild(this.imgNode);
-      this.className = "done";
+      this.className = 'done';
     }
 
     this.shadowRoot.childNodes[0][attributeName] = attributeValue;
   }
 }
 
-customElements.define("image-vignette", ImageVignette);
+customElements.define('image-vignette', ImageVignette);
 
 
 // https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements
@@ -126,10 +126,10 @@ customElements.define("image-vignette", ImageVignette);
 
 //     // Create a standard img element and set it's attributes.
 //     var img = document.createElement('img');
-//     img.alt = this.getAttribute('alt') || "";
-//     img.height = this.getAttribute('height') || "";
+//     img.alt = this.getAttribute('alt') || '';
+//     img.height = this.getAttribute('height') || '';
 //     img.src = this.getAttribute('src');
-//     img.width = this.getAttribute('width') || "";
+//     img.width = this.getAttribute('width') || '';
 //     // img.className = 'product-img';
 
 //     // Add the image to the shadow root.
@@ -165,7 +165,7 @@ customElements.define("image-vignette", ImageVignette);
 //   }
 // }
 
-// customElements.define("vignette-img", VignetteImg, { extends: "img" });
+// customElements.define('vignette-img', VignetteImg, { extends: 'img' });
 
 document.registerElement('vignette-img',  {
   extends: 'img',
@@ -190,14 +190,14 @@ document.registerElement('vignette-img',  {
 // var ImageVignette = Object.create(HTMLElement.prototype, {
 //   observedAttributes: {
 //     value: function() {
-//       return ["height", "src", "width"];
+//       return ['height', 'src', 'width'];
 //     }
 //   },
 
 //   createdCallback: {
 //     value: function() {
 // debugger;
-//       this.imgNode = document.createElement("img");
+//       this.imgNode = document.createElement('img');
 //       this.createShadowRoot().appendChild(this.imgNode);
 //     }
 //   },
@@ -210,9 +210,9 @@ document.registerElement('vignette-img',  {
 
 //   _updateRendering: {
 //     value: function(attributeName, attributeValue) {
-// console.log("FIRST");
+// console.log('FIRST');
 //       // if (this.ownerDocument && this.ownerDocument.defaultView && !this.hasChildNodes()) {
-//       //   this.imgNode = document.createElement("img");
+//       //   this.imgNode = document.createElement('img');
 //       //   this.appendChild(this.imgNode);
 //       // }
 // debugger;
@@ -336,10 +336,10 @@ xtag.register('x-vignette-img', {
 
 
 $(document).ready(function () {
-  var javascriptImageVignette = document.getElementById("JavascriptImageVignette") || null;
+  var javascriptImageVignette = document.getElementById('JavascriptImageVignette') || null;
 
   if (javascriptImageVignette) {
-    const imageVignette = document.createElement("image-vignette");
+    const imageVignette = document.createElement('image-vignette');
     imageVignette.setAttribute('height', 100);
     imageVignette.setAttribute('src', '/img/casual-me.jpg');
     imageVignette.setAttribute('width', 100);
