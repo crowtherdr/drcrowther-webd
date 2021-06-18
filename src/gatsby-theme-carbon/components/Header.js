@@ -1,10 +1,8 @@
-import React from 'react';
-import Header from 'gatsby-theme-carbon/src/components/Header';
+import React from 'react'
+import Header from 'gatsby-theme-carbon/src/components/Header'
 
 const CustomHeader = (props) => (
-  <Header {...props}>
-    Gatsby theme&nbsp;<span>Carbon</span>
-  </Header>
-);
+  <Header {...props}>DR Crowther WebD Portfolio</Header>
+)
 
-export default CustomHeader;
+export default CustomHeader
