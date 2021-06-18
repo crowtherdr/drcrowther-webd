@@ -5,7 +5,7 @@ Can be viewed at http://drcrowther-webd.herokuapp.com/
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Gatsby Theme Carbon Starter](https://github.com/carbon-design-system/gatsby-theme-carbon).
 
 ## Available Scripts
 

@@ -12,3 +12,6 @@ builtAssets
 npm-debug.log
 .idea
 .env
+.cache
+public
+public copy
