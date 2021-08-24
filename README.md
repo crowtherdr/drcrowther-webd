@@ -1,6 +1,13 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App using the TypeScript template](https://create-react-app.dev/docs/adding-typescript/).
+
+## Running App Locally
+There are a few steps to get this app cloned and ready to run locally.
+1. Clone this repo to your machine  
+  `git clone https://github.com/crowtherdr/drcrowther-webd.git`
+2. Run `yarn install`
+3. You should now be in a good state to run/develop the app locally
 
 ## Available Scripts
 
