@@ -7,9 +7,9 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   extends: [
-    'eslint:recommended',
-    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
   ],
   plugins: ['@typescript-eslint'],
   globals: {
@@ -17,7 +17,8 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2019,
+    sourceType: 'module',
   },
   rules: {
     'prettier/prettier': [
@@ -36,13 +37,23 @@ module.exports = {
     'consistent-return': 'off',
     'default-case': 'off',
     'no-unused-expressions': ['warn', { allowShortCircuit: true }],
-    // 'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'no-warning-comments': 1,
     'prefer-destructuring': 'off',
     'import/no-dynamic-require': 'off',
     'global-require': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
+    '@typescript-eslint/no-explicit-any': 1,
+    '@typescript-eslint/no-inferrable-types': ['warn', { ignoreParameters: true }],
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-use-before-define': 'off',
 
     semi: ['error', 'never'],
   },
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      parser: 'espree',
+      extends: [],
+    },
+  ],
 }
