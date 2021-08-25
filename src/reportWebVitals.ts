@@ -1,15 +1,13 @@
 import { ReportHandler } from 'web-vitals'
 
-const reportWebVitals = (onPerfEntry?: ReportHandler): void => {
+export default async function reportWebVitals(onPerfEntry?: ReportHandler): Promise<void> {
   if (onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry)
-      getFID(onPerfEntry)
-      getFCP(onPerfEntry)
-      getLCP(onPerfEntry)
-      getTTFB(onPerfEntry)
-    })
+    const vitals = await import('web-vitals')
+    const { getCLS, getFID, getFCP, getLCP, getTTFB } = vitals
+    getCLS(onPerfEntry)
+    getFID(onPerfEntry)
+    getFCP(onPerfEntry)
+    getLCP(onPerfEntry)
+    getTTFB(onPerfEntry)
   }
 }
-
-export default reportWebVitals

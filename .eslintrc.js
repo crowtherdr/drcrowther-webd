@@ -7,9 +7,10 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   extends: [
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
     'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+    'plugin:prettier/recommended',
   ],
   plugins: ['@typescript-eslint'],
   globals: {
@@ -19,6 +20,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   rules: {
     'prettier/prettier': [
@@ -31,16 +35,17 @@ module.exports = {
       },
     ],
     'arrow-parens': 'off',
+    'consistent-return': 'off',
+    'default-case': 'off',
+    'global-require': 'off',
+    'import/no-dynamic-require': 'off',
+    'max-lines-per-function': ['warn', 40],
     'no-console': 'off',
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
-    'consistent-return': 'off',
-    'default-case': 'off',
     'no-unused-expressions': ['warn', { allowShortCircuit: true }],
     'no-warning-comments': 1,
     'prefer-destructuring': 'off',
-    'import/no-dynamic-require': 'off',
-    'global-require': 'off',
     '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
     '@typescript-eslint/no-explicit-any': 1,
     '@typescript-eslint/no-inferrable-types': ['warn', { ignoreParameters: true }],
