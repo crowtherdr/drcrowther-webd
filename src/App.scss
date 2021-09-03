@@ -60,14 +60,17 @@
   z-index: -1;
 }
 
-.Hero-section h1 {
-  // width: 100%;
+.Hero-section .hero-title {
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin-bottom: 3.2rem;
+  text-align: left;
 }
 
 .hero-cta {
   display: flex;
   & a {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
 
@@ -96,16 +99,16 @@
 
 /* Hero Style */
 .cta-btn--hero {
-  background-image: linear-gradient(135deg, #a6c8ff 0%, #edf5ff 100%);
+  background-image: linear-gradient(135deg, #4589ff 0%, #a6c8ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-width: 2px;
   border-style: solid;
-  border-image: linear-gradient(135deg, #a6c8ff 0%, #edf5ff 100%);
+  border-image: linear-gradient(135deg, #4589ff 0%, #a6c8ff 100%);
   border-image-slice: 1;
   cursor: pointer;
   &::after {
-    background-image: linear-gradient(135deg, #a6c8ff 0%, #edf5ff 100%);
+    background-image: linear-gradient(135deg, #4589ff 0%, #a6c8ff 100%);
   }
   &:hover {
     -webkit-text-fill-color: #ffffff;

@@ -29,18 +29,20 @@ function App(): JSX.Element {
       </header> */}
       <div className="App-content">
         <header className="Hero-section">
-          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-            <h1 className="hero-title">Hi, I&apos;m David Crowther. I&apos;m a web developer.</h1>
-          </Fade>
-          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-            <p className="hero-cta">
-              <span className="cta-btn cta-btn--hero">
-                <Link to="about" smooth duration={1000}>
-                  {'Know more'}
-                </Link>
-              </span>
-            </p>
-          </Fade>
+          <div>
+            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+              <h1 className="hero-title">Hi, I&apos;m David Crowther. I&apos;m a web developer.</h1>
+            </Fade>
+            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+              <p className="hero-cta">
+                <span className="cta-btn cta-btn--hero">
+                  <Link to="about" smooth duration={1000}>
+                    {'Know more'}
+                  </Link>
+                </span>
+              </p>
+            </Fade>
+          </div>
         </header>
         <section id="about" className="App-section">
           <h2>About David Richard Crowther</h2>
