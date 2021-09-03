@@ -1,17 +1,48 @@
-import React from 'react'
-import logo from './logo.svg'
+import React, { useEffect, useState } from 'react'
+// import logo from './logo.svg'
 import './App.scss'
+import Fade from 'react-reveal/Fade'
+import { Link } from 'react-scroll'
 import { Button } from 'carbon-components-react'
 
 // eslint-disable-next-line max-lines-per-function
 function App(): JSX.Element {
+  const [isDesktop, setIsDesktop] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    if (window.innerWidth > 769) {
+      setIsDesktop(true)
+      setIsMobile(false)
+    } else {
+      setIsMobile(true)
+      setIsDesktop(false)
+    }
+  }, [])
+
+  // Thanks to https://github.com/cobidev/gatsby-simplefolio for my site theme inspiration.
+
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      </header> */}
       <div className="App-content">
-        <section className="App-section">
+        <header className="Hero-section">
+          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+            <h1 className="hero-title">Hi, I&apos;m David Crowther. I&apos;m a web developer.</h1>
+          </Fade>
+          <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+            <p className="hero-cta">
+              <span className="cta-btn cta-btn--hero">
+                <Link to="about" smooth duration={1000}>
+                  {'Know more'}
+                </Link>
+              </span>
+            </p>
+          </Fade>
+        </header>
+        <section id="about" className="App-section">
           <h2>About David Richard Crowther</h2>
           <p>
             Hello. Below is some information about me, David Crowther. Links from this page show
@@ -58,6 +89,17 @@ function App(): JSX.Element {
             added.
           </p>
         </section>
+        {/* <section className="App-section">
+          <p>Hi, I&apos;m David!</p>
+          <p>
+            I&apos;m a web developer with expertise in HTML, CSS, JavaScript, React. I particularly
+            enjoy ...
+          </p>
+
+          <p>christian, family man, web developer, learning lover, utahan</p>
+          <p>Follower of One. Son of two. Husband of one. Father of four. Learner of many.</p>
+          <p>christian, family man, web dev</p>
+        </section> */}
         <section className="App-section">
           <h2>Temporary Stuff.</h2>
           <p>

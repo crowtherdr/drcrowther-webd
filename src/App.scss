@@ -1,5 +1,6 @@
 .App {
   line-height: 24px;
+  margin-bottom: 300px;
 }
 
 .App-logo {
@@ -8,39 +9,113 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  // .App-logo {
+  //   animation: App-logo-spin infinite 20s linear;
+  // }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-  justify-content: left;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+// .App-header {
+//   background-color: #282c34;
+//   min-height: 10vh;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: left;
+//   justify-content: left;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
 
 .App-content {
   margin: 20px auto 40px;
   width: 90%;
 }
+
+.Hero-section {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 0px;
+  font-weight: 400;
+  padding: 0rem 5.6rem;
+  margin-bottom: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.Hero-section h1 {
+  // width: 100%;
+}
+
+.hero-cta {
+  display: flex;
+  & a {
+    font-size: 2.4rem;
+  }
+}
+
+/* Call to Action Button */
+.cta-btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  }
+}
+
+/* Hero Style */
+.cta-btn--hero {
+  background-image: linear-gradient(135deg, #a6c8ff 0%, #edf5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(135deg, #a6c8ff 0%, #edf5ff 100%);
+  border-image-slice: 1;
+  cursor: pointer;
+  &::after {
+    background-image: linear-gradient(135deg, #a6c8ff 0%, #edf5ff 100%);
+  }
+  &:hover {
+    -webkit-text-fill-color: #ffffff;
+    text-decoration: none;
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
 
 .App-section {
   margin: 20px auto 40px;
