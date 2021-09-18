@@ -4,6 +4,7 @@ import './App.scss'
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-scroll'
 import { Button } from 'carbon-components-react'
+import ProfileImage from './images/about-me.jpg'
 
 // eslint-disable-next-line max-lines-per-function
 function App(): JSX.Element {
@@ -45,40 +46,61 @@ function App(): JSX.Element {
           </div>
         </header>
         <section id="about" className="App-section">
-          <h2>About David Richard Crowther</h2>
-          <p>
-            Hello. Below is some information about me, David Crowther. Links from this page show
-            examples of my work.
-          </p>
-
-          <h3>Who am I?</h3>
-          <p>My name: David Richard Crowther</p>
-          <p>My occupation: Web design and development since 1998.</p>
-          <p>
-            My background: I was a teenager in the 1980&apos;s and enjoyed lots of awesome music and
-            watched computers grow up.
-          </p>
-          <p>More about me</p>
-          <ul>
-            <li>My family and I live in Lehi, Utah.</li>
-            <li>I am a web developer for FamilySearch.org.</li>
-            <li>
-              I am a Utah State University masters graduate of Learning Technology and Instructional
-              Design.
-            </li>
-            <li>
-              I am a Columbia College bachelor of business administration with an emphasis in
-              computer information systems.
-            </li>
-            <li>
-              I enjoy learning about most subjects, especially religious topics, technology, and
-              history.
-            </li>
-            <li>
-              I also like being in the outdoors; nothing extreme, just leisurely outdoor activities
-              with family and friends. I like building things physically or virtually.​
-            </li>
-          </ul>
+          <div className="container">
+            {/* <Title title="About Me" />*/}
+            <h2>About David Crowther</h2>
+            <div className="about-wrapper row">
+              <div className="col-md-6 col-sm-12">
+                <Fade bottom duration={1000} delay={600} distance="30px">
+                  <div className="about-wrapper__image">
+                    <img alt="profile picture" src={ProfileImage} />
+                  </div>
+                </Fade>
+              </div>
+              <div className="col-md-6 col-sm-12">
+                <Fade
+                  left={isDesktop}
+                  bottom={isMobile}
+                  duration={1000}
+                  delay={1000}
+                  distance="30px"
+                >
+                  <div className="about-wrapper__info">
+                    <p className="about-wrapper__info-text">
+                      My family and I live in Lehi, Utah. I&apos;m a web developer for
+                      FamilySearch.org. I&apos;m a Utah State University masters graduate of
+                      Learning Technology and Instructional Design and a Columbia College bachelor
+                      of business administration with an emphasis in computer information systems.
+                    </p>
+                    <p className="about-wrapper__info-text">
+                      I&apos;ve been doing Web design and development since 1998. I was a teenager
+                      in the 1980&apos;s and enjoyed lots of awesome music and watched computers
+                      grow up.
+                    </p>
+                    <p className="about-wrapper__info-text">
+                      I enjoy learning about most subjects, especially religious topics, technology,
+                      and history. I also like being in the outdoors; nothing extreme, just
+                      leisurely outdoor activities with family and friends. I like building things
+                      physically or virtually.​
+                    </p>
+                    <p className="about-wrapper__info-text">Below are some examples of my work.</p>
+                    {/* {resume && (
+                  <span className="d-flex mt-3">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cta-btn cta-btn--resume"
+                      href={resume}
+                    >
+                      Resume
+                    </a>
+                  </span>
+                )} */}
+                  </div>
+                </Fade>
+              </div>
+            </div>
+          </div>
         </section>
         <section className="App-section">
           <h2>About this site.</h2>
