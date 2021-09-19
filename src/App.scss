@@ -122,8 +122,8 @@ section {
 // }
 
 .App-content {
-  margin: 20px auto 40px;
-  width: 90%;
+  // margin: 20px auto 40px;
+  // width: 90%;
 }
 
 .App-section {
@@ -145,6 +145,12 @@ section {
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+
+@media (min-width: 576px) {
+  .Hero-section {
+      // padding: 4rem 2rem;
+  }
 }
 
 .Hero-section .hero-title {
@@ -228,6 +234,14 @@ section {
   -webkit-clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
   clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
   padding-bottom: 10%;
+}
+
+@media (max-width: 75em) {
+  #about {
+      height: 100%;
+      -webkit-clip-path: none;
+      clip-path: none;
+  }
 }
 
 #about h2 {
