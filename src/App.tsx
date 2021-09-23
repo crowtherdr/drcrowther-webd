@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade'
 import { Link } from 'react-scroll'
 import { Button } from 'carbon-components-react'
 import ProfileImage from './images/about-me.jpg'
+import KnowMoreContent from './content/know_more_content_en.json'
 
 // eslint-disable-next-line max-lines-per-function
 function App(): JSX.Element {
@@ -54,7 +55,7 @@ function App(): JSX.Element {
         <section id="about" className="App-section">
           <div className="container">
             {/* <Title title="About Me" />*/}
-            <h2>About David Crowther</h2>
+            <h2>{KnowMoreContent?.pageContent?.mainHeading}</h2>
             <div className="about-wrapper row">
               <div className="col-md-6 col-sm-12">
                 <Fade bottom duration={1000} delay={600} distance="30px">
@@ -72,24 +73,15 @@ function App(): JSX.Element {
                   distance="30px"
                 >
                   <div className="about-wrapper__info">
-                    <p className="about-wrapper__info-text">
-                      My family and I live in Lehi, Utah. I&apos;m a web developer for
-                      FamilySearch.org. I&apos;m a Utah State University masters graduate of
-                      Learning Technology and Instructional Design and a Columbia College bachelor
-                      of business administration with an emphasis in computer information systems.
-                    </p>
-                    <p className="about-wrapper__info-text">
-                      I&apos;ve been doing Web design and development since 1998. I was a teenager
-                      in the 1980&apos;s and enjoyed lots of awesome music and watched computers
-                      grow up.
-                    </p>
-                    <p className="about-wrapper__info-text">
-                      I enjoy learning about most subjects, especially religious topics, technology,
-                      and history. I also like being in the outdoors; nothing extreme, just
-                      leisurely outdoor activities with family and friends. I like building things
-                      physically or virtually.​
-                    </p>
-                    <p className="about-wrapper__info-text">Below are some examples of my work.</p>
+                    {KnowMoreContent?.pageContent?.mainContentParagraphArray.map(
+                      (mainContentParagraph, index) => {
+                        return (
+                          <p key={index} className="about-wrapper__info-text">
+                            {mainContentParagraph}
+                          </p>
+                        )
+                      }
+                    )}
                     {/* {resume && (
                   <span className="d-flex mt-3">
                     <a
