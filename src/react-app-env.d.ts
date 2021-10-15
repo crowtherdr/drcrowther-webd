@@ -1,5 +1,6 @@
 /// <reference types="react-scripts" />
 declare module 'react-reveal/Fade'
+declare module 'react-tilt'
 // Consider https://definitelytyped.org/
 // declare module 'react-reveal/Fade' {
 //   export type Options = {

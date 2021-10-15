@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "date": "2021-09-27",
+    "title": "David Crowther Projects"
+  },
+  "pageContent": {
+    "pageOrSection": "Projects",
+    "title": "My Projects",
+    "mainHeading": "Projects",
+    "responsiveText": "responsive design",
+    "projects": [
+      {
+        "whichProject": 1,
+        "title": "Latin America Homeland",
+        "description": "The purpose of the FamilySearch Latin America Homeland Team is to support and provide localized and culturalized experiences for the people of Latin America. This and other homeland teams were announced early in 2021 and volunteers were requested to staff the teams. I was happy on the Family Tree Team, however, I don't like to hear crickets chirping when someone asks for volunteers, so I volunteered. And, here I am. I was surprised at the diversity of just language in this area. I knew about Spanish and Portuguese. However, there is also, French, Dutch, Italian, and others. We are focusing on SEO for ES, FR, IT, and PT; better search experiences for this region (which benefits all the world), and LA cultural celebrations like Día de los Muertos.",
+        "projectDemoUrl": "https://www.familysearch.org/latam/dia-de-los-muertos/"
+      },
+      {
+        "whichProject": 2,
+        "title": "Family Tree"
+      },
+      {
+        "whichProject": 3,
+        "title": "Marketing",
+        "examples": [
+          {
+            "title": "Production Examples",
+            "links": [
+              {
+                "linkText": "About FamilySearch",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/about/?locale=en",
+                "responsive": true
+              },
+              {
+                "linkText": "Archives microsite",
+                "linkURL": "http://fs-archives-crowtherdr.herokuapp.com/",
+                "responsive": false
+              },
+              {
+                "linkText": "Donate Today",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/donations/?locale=en",
+                "responsive": false
+              },
+              {
+                "linkText": "Conference in a Box",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/familysearch-conference-in-a-box/?locale=en",
+                "responsive": true
+              },
+              {
+                "linkText": "My Family",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/myfamily/?locale=en",
+                "responsive": true
+              },
+              {
+                "linkText": "Personal Ancestral File",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/paf/?locale=en",
+                "responsive": true
+              },
+              {
+                "linkText": "Records Preservation Mission Opportunities",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/records-mission/?locale=en",
+                "responsive": false
+              },
+              {
+                "linkText": "Terms of Use",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/terms/?locale=en",
+                "responsive": false
+              },
+              {
+                "linkText": "Volunteer",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/volunteer/?locale=en",
+                "responsive": true
+              },
+              {
+                "linkText": "What's New",
+                "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/whats-new/?locale=en",
+                "responsive": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "whichProject": 4,
+        "title": "Skills Building"
+      },
+      {
+        "whichProject": 5,
+        "title": "HTML/CSS Examples",
+        "examples": 
+          [
+            {
+              "title": "Production Examples",
+              "links": [
+                {
+                  "linkText": "About FamilySearch",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/about/?locale=en",
+                  "responsive": true
+                },
+                {
+                  "linkText": "Archives microsite",
+                  "linkURL": "http://fs-archives-crowtherdr.herokuapp.com/",
+                  "responsive": false
+                },
+                {
+                  "linkText": "Donate Today",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/donations/?locale=en",
+                  "responsive": false
+                },
+                {
+                  "linkText": "Conference in a Box",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/familysearch-conference-in-a-box/?locale=en",
+                  "responsive": true
+                },
+                {
+                  "linkText": "My Family",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/myfamily/?locale=en",
+                  "responsive": true
+                },
+                {
+                  "linkText": "Personal Ancestral File",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/paf/?locale=en",
+                  "responsive": true
+                },
+                {
+                  "linkText": "Records Preservation Mission Opportunities",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/records-mission/?locale=en",
+                  "responsive": false
+                },
+                {
+                  "linkText": "Terms of Use",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/terms/?locale=en",
+                  "responsive": false
+                },
+                {
+                  "linkText": "Volunteer",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/volunteer/?locale=en",
+                  "responsive": true
+                },
+                {
+                  "linkText": "What's New",
+                  "linkURL": "https://fs-landing-crowtherdr.herokuapp.com/whats-new/?locale=en",
+                  "responsive": true
+                }
+              ]
+            }
+          ]
+      }
+    ]
+  }
+}
