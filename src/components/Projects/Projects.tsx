@@ -3,8 +3,9 @@ import Fade from 'react-reveal/Fade'
 import Tilt from 'react-tilt'
 import ProjectsContent from '../../content/projects_content_en.json'
 import laHomelandProjectExample from '../../assets/la-homeland-dia-de-los-muertos.jpg'
+import familyTreeProjectExample from '../../assets/family-tree-overview-preview.jpg'
 
-const exampleImages = ['', laHomelandProjectExample, '', '', '', '']
+const exampleImages = ['', laHomelandProjectExample, familyTreeProjectExample, '', '', '']
 
 const Projects = () => {
   const [isDesktop, setIsDesktop] = useState(false)
@@ -30,7 +31,7 @@ const Projects = () => {
           <h2 className="section-title">{ProjectsContent?.pageContent?.mainHeading}</h2>
           {ProjectsContent?.pageContent?.projects.map(
                       (project, index) => {
-            const { whichProject, title, description, projectDemoUrl } = project;
+            const { whichProject, title, description, projectDemoUrl = [], projectDemoUrl2 = [] } = project;
             
 
             return (
@@ -53,13 +54,22 @@ const Projects = () => {
                           </p>
                           <p className="mb-4">{false || ''}</p>
                         </div>
-                        {projectDemoUrl && (<a
+                        {projectDemoUrl.length && (<a
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cta-btn cta-btn--hero"
-                          href={projectDemoUrl}
+                          href={projectDemoUrl[1]}
                         >
-                          See Live
+                          {projectDemoUrl[0] ? projectDemoUrl[0] : ("See Live")}
+                        </a>)}
+
+                        {!!projectDemoUrl2.length && (<a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-btn cta-btn--hero"
+                          href={projectDemoUrl2[1]}
+                        >
+                          {projectDemoUrl2[0] ? projectDemoUrl2[0] : ("See Live")}
                         </a>)}
 
                         {false && (
@@ -85,7 +95,7 @@ const Projects = () => {
                     >
                       <div className="project-wrapper__image">
                         <a
-                          href={projectDemoUrl}
+                          href={projectDemoUrl[1]}
                           target="_blank"
                           aria-label="Project Link"
                           rel="noopener noreferrer"
