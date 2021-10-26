@@ -35,9 +35,9 @@ function App(): JSX.Element {
           <div className="container">
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
               <h1 className="hero-title">
-                Hi, my name is {''}
-                <span className="text-color-main">David Crowther</span>.<br />
-                I&apos;m a <span>web developer</span>.
+                Hi, my name is
+                <span className="hero-title-name"><span className="text-color-main"> David Crowther</span>.<br />
+                I&apos;m a <span>web developer</span>.</span>
                 {/* <span>disciple</span>
                 <span>family man</span> */}
               </h1>

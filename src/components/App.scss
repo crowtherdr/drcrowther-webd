@@ -199,6 +199,13 @@ section {
   }
 }
 
+@media (max-width: 520px),
+       (min-width: 770px) and (max-width: 1000px) {
+  .Hero-section .hero-title-name {
+    display: inline-block;
+  }
+}
+
 .text-color-main {
   background-image: linear-gradient(
 135deg,#0043ce,#a6c8ff);
