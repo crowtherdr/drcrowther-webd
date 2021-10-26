@@ -176,12 +176,6 @@ section {
   z-index: -1;
 }
 
-@media (min-width: 576px) {
-  .Hero-section {
-      // padding: 4rem 2rem;
-  }
-}
-
 .Hero-section .hero-title {
   background-image: url("../assets/profile-pic-light.jpg");
   background-position: 0;
@@ -192,6 +186,17 @@ section {
   margin-bottom: 3.2rem;
   padding-top: 320px;
   text-align: left;
+}
+
+@media (max-width: 576px) {
+  .Hero-section {
+    padding: 0rem 2rem;
+  }
+
+  .Hero-section .hero-title {
+    background-size: 240px;
+    font-size: 3rem;
+  }
 }
 
 .text-color-main {
@@ -289,6 +294,16 @@ section {
 #about .about-wrapper__info-text {
   text-align: left;
 }
+
+@media (max-width: 576px) {
+  #about {
+    padding: 0rem 2rem;
+  }
+
+  .about-wrapper__image img {
+    width: 100%;
+  }
+}
 /* END: Know More Section */
 /* Projects Section */
 #projects {
@@ -329,6 +344,26 @@ section {
           0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
       }
     }
+  }
+}
+
+@media (max-width: 576px) {
+  #projects {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  #projects .project-wrapper .row {
+    margin-bottom: 4rem;
+  }
+
+  .project-wrapper__text a + a {
+    margin-top: 12px;
+  }
+
+  .project-wrapper__image img {
+    margin-top: 24px;
+    width: 100%;
   }
 }
 /* END: Projects Section */
