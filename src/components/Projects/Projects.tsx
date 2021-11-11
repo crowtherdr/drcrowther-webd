@@ -47,7 +47,7 @@ const Projects = () => {
           <h2 className="section-title">{ProjectsContent?.pageContent?.mainHeading}</h2>
           {ProjectsContent?.pageContent?.projects.map(
                       (project, index) => {
-            const { whichProject, title, description, projectDemoUrl = [], projectDemoUrl2 = [], examples = [] } = project;
+            const { whichProject, title, description, projectDemoUrl = [], examples = [] } = project;
             // const exampleLinks = examples[0]?.links || []
 
             return (
@@ -79,14 +79,6 @@ const Projects = () => {
                           {projectDemoUrl[0] ? projectDemoUrl[0] : ("See Live")}
                         </a>)}
 
-                        {!!projectDemoUrl2.length && (<a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-btn cta-btn--hero"
-                          href={projectDemoUrl2[1]}
-                        >
-                          {projectDemoUrl2[0] ? projectDemoUrl2[0] : ("See Live")}
-                        </a>)}
                         {!!examples.length && (
                           <>
                             <p>{examples[0].heading}</p>
