@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.scss'
+import './index.css'
 import App from './components/App'
 import reportWebVitals from './reportWebVitals'
 
@@ -10,6 +10,11 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 )
+
+export { globals } from 'src/styles/globals'
+// Great instructions for implementing Linaria in CRA with TypeScript
+// https://betterprogramming.pub/create-react-app-with-linaria-9938b3b8e94
+// https://github.com/manakuro/create-react-app-with-linaria-example
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

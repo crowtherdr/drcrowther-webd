@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 // import logo from './logo.svg'
-import './App.scss'
+import { styled } from '@linaria/react'
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-scroll'
-import { Button } from 'carbon-components-react'
 import ProfileImage from '../assets/about-me.jpg'
 import KnowMoreContent from '../content/know_more_content_en.json'
 import Projects from './Projects/Projects'
@@ -109,7 +108,7 @@ function App(): JSX.Element {
             <a href="https://create-react-app.dev/docs/adding-typescript/">
               Create React App with the TypeScript template
             </a>
-            ). The <a href="https://www.carbondesignsystem.com/">IBM Carbon Design System</a> was
+            ). Then <a href="https://github.com/callstack/linaria/">Linaria</a> was
             added.
           </p>
         </section>
@@ -127,7 +126,7 @@ function App(): JSX.Element {
         <section className="App-section">
           <h2>Temporary Stuff.</h2>
           <p>
-            <Button>Example Carbon Button</Button>
+            <button>Example non-Carbon Button</button>
           </p>
         </section>
       </div>
