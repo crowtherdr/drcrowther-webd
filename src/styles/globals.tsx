@@ -4,6 +4,104 @@ import { css } from '@linaria/core'
 
 export const globals = css`
   :global() {
+    // Reset
+    * {
+      box-sizing: border-box;
+    }
+    a,
+    abbr,
+    acronym,
+    address,
+    applet,
+    article,
+    aside,
+    audio,
+    b,
+    big,
+    blockquote,
+    body,
+    canvas,
+    caption,
+    center,
+    cite,
+    code,
+    dd,
+    del,
+    details,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    embed,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hgroup,
+    html,
+    i,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    mark,
+    menu,
+    nav,
+    object,
+    ol,
+    output,
+    p,
+    pre,
+    q,
+    ruby,
+    s,
+    samp,
+    section,
+    small,
+    span,
+    strike,
+    strong,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    tt,
+    u,
+    ul,
+    var,
+    video {
+      padding: 0;
+      border: 0;
+      margin: 0;
+      font: inherit;
+      font-size: 100%;
+      vertical-align: baseline;
+    }
+    ol,
+    ul {
+      list-style: none;
+    }
+    // END: Reset
+
     html {
       font-size: 62.5%;
     }
@@ -12,14 +110,51 @@ export const globals = css`
       background-color: #393939;
       color: #f4f4f4;
       font-family: Montserrat, sans-serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      /* line-height: 1.28572; */
+      letter-spacing: 0.16px;
       line-height: 1;
       text-align: center;
+    }
+
+    h1 {
+      font-size: 2.625rem;
+      font-weight: 300;
+      line-height: 1.199;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      line-height: 1.28572;
+    }
+
+    h2,
+    h3 {
+      font-weight: 400;
+      letter-spacing: 0;
     }
 
     a,
     p {
       font-family: Montserrat, sans-serif;
       font-size: 1.6rem;
+    }
+
+    p {
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: #78a9ff;
     }
 
     ul {
@@ -89,13 +224,6 @@ export const globals = css`
       .container-xl {
         max-width: 1140px;
       }
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: -15px;
-      margin-left: -15px;
     }
 
     .col,
