@@ -341,41 +341,6 @@ export const globals = css`
       margin-bottom: 300px;
     }
 
-    .App-logo {
-      height: 10vmin;
-      pointer-events: none;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      // .App-logo {
-      //   animation: App-logo-spin infinite 20s linear;
-      // }
-    }
-
-    // .App-header {
-    //   background-color: #282c34;
-    //   min-height: 10vh;
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: left;
-    //   justify-content: left;
-    //   font-size: calc(10px + 2vmin);
-    //   color: white;
-    // }
-
-    .App-link {
-      color: #61dafb;
-    }
-
-    // @keyframes App-logo-spin {
-    //   from {
-    //     transform: rotate(0deg);
-    //   }
-    //   to {
-    //     transform: rotate(360deg);
-    //   }
-    // }
-
     .App-content {
       // margin: 20px auto 40px;
       // width: 90%;
@@ -536,72 +501,4 @@ export const globals = css`
       }
     }
     /* END: Know More Section */
-    /* Projects Section */
-    #projects {
-      margin-top: -15rem;
-      padding-top: 15rem;
-
-      .project-wrapper {
-        margin-bottom: 15rem;
-
-        .row {
-          margin-bottom: 8rem;
-        }
-
-        &__text {
-          text-align: left;
-
-          &-title {
-            font-weight: bold;
-            margin-bottom: 1.8rem;
-            font-size: 2.5rem;
-          }
-
-          & p > a {
-            color: #4589ff;
-          }
-        }
-
-        &__image {
-          width: 90%;
-          margin: 0 auto;
-
-          & .thumbnail {
-            border: none;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            transition: all 0.2s ease-out;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-            transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
-              0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-            & img {
-              max-width: 660px;
-            }
-          }
-        }
-      }
-    }
-
-    @media (max-width: 1200px) {
-      .project-wrapper__text a + a {
-        margin-top: 12px;
-      }
-    }
-
-    @media (max-width: 990px) {
-      #projects {
-        padding-right: 2rem;
-        padding-left: 2rem;
-      }
-
-      #projects .project-wrapper .row {
-        margin-bottom: 4rem;
-      }
-
-      .project-wrapper__image img {
-        margin-top: 24px;
-        width: 100%;
-      }
-    }
-    /* END: Projects Section */
-  }
 `

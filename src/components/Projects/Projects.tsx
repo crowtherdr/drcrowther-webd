@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { css } from '@linaria/core'
 import Fade from 'react-reveal/Fade'
 import Tilt from 'react-tilt'
 import ProjectsContent from '../../content/projects_content_en.json'
@@ -17,6 +18,74 @@ import whatsNew from '../../assets/project-examples/whats-new.jpg'
 
 const exampleImages = ['', laHomelandProjectExample, familyTreeProjectExample, '', '', '']
 const exampleMarketingPages = [aboutFS, fsArchives, donateToday, conferenceInBox, myFamily, personalAncestralFile, recordsPresMissionOpps, fsTermsOfUse, volunteer, whatsNew]
+
+const projectsCss = css`
+  margin: 200px auto 40px; /* From .app-section. Figure out how to include without duplicating. */
+  margin-top: -15rem;
+  padding-top: 15rem;
+
+  .project-wrapper {
+    margin-bottom: 15rem;
+
+    .row {
+      margin-bottom: 8rem;
+    }
+
+    &__text {
+      text-align: left;
+
+      &-title {
+        font-weight: bold;
+        margin-bottom: 1.8rem;
+        font-size: 2.5rem;
+      }
+
+      & p > a {
+        color: #4589ff;
+      }
+    }
+
+    &__image {
+      width: 90%;
+      margin: 0 auto;
+
+      & .thumbnail {
+        border: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transition: all 0.2s ease-out;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
+          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+        & img {
+          max-width: 660px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 990px) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    & .project-wrapper .row {
+      margin-bottom: 4rem;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .project-wrapper__text a + a {
+      margin-top: 12px;
+    }
+  }
+
+  @media (max-width: 990px) {
+    .project-wrapper__image img {
+      margin-top: 24px;
+      width: 100%;
+    }
+  }
+  /* END: Projects Section */
+`
 
 const Projects = () => {
   const [isDesktop, setIsDesktop] = useState(false)
@@ -40,7 +109,7 @@ const Projects = () => {
   // Thanks to https://github.com/cobidev/gatsby-simplefolio for my site theme inspiration.
 
   return (
-    <section id="projects">
+    <section className={projectsCss}>
       <div className="container">
         <div className="project-wrapper">
           {/* <Title title="Projects" /> */}
