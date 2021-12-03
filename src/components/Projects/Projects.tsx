@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { css } from '@linaria/core'
+import { styled } from '@linaria/react';
 import Fade from 'react-reveal/Fade'
 import Tilt from 'react-tilt'
 import ProjectsContent from '../../content/projects_content_en.json'
@@ -18,6 +19,11 @@ import whatsNew from '../../assets/project-examples/whats-new.jpg'
 
 const exampleImages = ['', laHomelandProjectExample, familyTreeProjectExample, '', '', '']
 const exampleMarketingPages = [aboutFS, fsArchives, donateToday, conferenceInBox, myFamily, personalAncestralFile, recordsPresMissionOpps, fsTermsOfUse, volunteer, whatsNew]
+
+const RoundedDiv = styled.div`
+  border-radius: .25rem;
+  overflow: hidden;
+`
 
 const projectsCss = css`
   margin: 200px auto 40px; /* From .app-section. Figure out how to include without duplicating. */
@@ -48,18 +54,6 @@ const projectsCss = css`
     &__image {
       width: 90%;
       margin: 0 auto;
-
-      & .thumbnail {
-        border: none;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        transition: all 0.2s ease-out;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
-          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-        & img {
-          max-width: 660px;
-        }
-      }
     }
   }
 
@@ -77,14 +71,25 @@ const projectsCss = css`
       margin-top: 12px;
     }
   }
+`
+
+const projectThumbnail = css`
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s ease-out;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
+    0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  & img {
+    max-width: 660px;
+  }
 
   @media (max-width: 990px) {
-    .project-wrapper__image img {
+    & img {
       margin-top: 24px;
       width: 100%;
     }
   }
-  /* END: Projects Section */
 `
 
 const Projects = () => {
@@ -210,11 +215,10 @@ const Projects = () => {
                               easing: 'cubic-bezier(.03,.98,.52,.99)',
                             }}
                           >
-                            <div data-tilt className="thumbnail rounded">
+                            <RoundedDiv data-tilt className={projectThumbnail}>
                               { whichProject !== 3 && exampleImages[whichProject] && (<img alt={'alt'} src={exampleImages[whichProject]} />)}
-                              {/* <ProjectImg alt={'title'} filename={'img'} /> */}
                               { whichProject === 3 && exampleMarketingPages[0] && (<img id="marketingExample" alt={'alt'} src={exampleMarketingPages[whichMarketingExample]} />)}
-                            </div>
+                            </RoundedDiv>
                           </Tilt>
                         </a>
                       </div>
