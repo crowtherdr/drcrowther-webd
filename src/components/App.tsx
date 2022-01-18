@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade'
 import { Link } from 'react-scroll'
 import ProfileImage from '../assets/about-me.jpg'
 import KnowMoreContent from '../content/know_more_content_en.json'
+import Hero from './Hero/Hero'
 import Projects from './Projects/Projects'
 
 // eslint-disable-next-line max-lines-per-function
@@ -27,28 +28,7 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <div className="App-content">
-        <header className="Hero-section">
-          <div className="container">
-            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-              <h1 className="hero-title">
-                Hi, my name is
-                <span className="hero-title-name"><span className="text-color-main"> David Crowther</span>.<br />
-                I&apos;m a <span>web developer</span>.</span>
-                {/* <span>disciple</span>
-                <span>family man</span> */}
-              </h1>
-            </Fade>
-            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-              <p className="hero-cta">
-                <span className="cta-btn cta-btn--hero">
-                  <Link to="about" smooth duration={1000}>
-                    {'Know more'}
-                  </Link>
-                </span>
-              </p>
-            </Fade>
-          </div>
-        </header>
+        <Hero />
         <section id="about" className="App-section">
           <div className="container">
             {/* <Title title="About Me" />*/}
@@ -120,12 +100,6 @@ function App(): JSX.Element {
           <p>Follower of One. Son of two. Husband of one. Father of four. Learner of many.</p>
           <p>christian, family man, web dev</p>
         </section> */}
-        <section className="App-section">
-          <h2>Temporary Stuff.</h2>
-          <p>
-            <button>Example non-Carbon Button</button>
-          </p>
-        </section>
       </div>
     </div>
   )

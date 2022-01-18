@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "date": "2022-01-18",
+    "title": "David Crowther Portfolio"
+  },
+  "pageContent": {
+    "pageOrSection": "Hero",
+    "hiIntro": "Hi, my name is ",
+    "hiName": "David Crowther",
+    "hiIAmA": "I'm a ",
+    "hiWhatIAm": "web developer",
+    "knowMoreLink": "Know more"
+  }
+}
