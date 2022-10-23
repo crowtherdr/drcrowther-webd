@@ -51,7 +51,6 @@ module.exports = {
     '@typescript-eslint/no-inferrable-types': ['warn', { ignoreParameters: true }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-use-before-define': 'off',
-
     semi: ['error', 'never'],
   },
   overrides: [
