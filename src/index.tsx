@@ -1,15 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './components/App'
 import reportWebVitals from './reportWebVitals'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+const root = createRoot(document.getElementById('root')!)
+root.render(<App />)
 
 export { globals } from 'src/styles/globals'
 // Great instructions for implementing Linaria in CRA with TypeScript
