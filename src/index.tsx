@@ -4,6 +4,7 @@ import './index.css'
 import App from './components/App'
 import reportWebVitals from './reportWebVitals'
 
+// eslint-disable-next-line
 const root = createRoot(document.getElementById('root')!)
 root.render(<App />)
 
