@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "date": "2021-09-27",
+    "title": "David Crowther Projects"
+  },
+  "pageContent": {
+    "pageOrSection": "Projects",
+    "title": "My Projects",
+    "mainHeading": "Projects",
+    "responsiveText": "responsive design",
+    "projects": [
+      {
+        "whichProject": 1,
+        "title": "Latin America Homeland",
+        "description": "The purpose of the FamilySearch Latin America Homeland Team is to support and provide localized and culturalized experiences for the people of Latin America. This and other homeland teams were announced early in 2021 and volunteers were requested to staff the teams. I was happy on the Family Tree Team, however, I don't like to hear crickets chirping when someone asks for volunteers, so I volunteered. And, here I am. I was surprised at the diversity of just language in this area. I knew about Spanish and Portuguese. However, there is also, French, Dutch, Italian, and others. We are focusing on SEO for ES, FR, IT, and PT; better search experiences for this region (which benefits all the world), and LA cultural celebrations like Día de los Muertos.",
+        "projectDemoUrl": []
+      },
+      {
+        "whichProject": 2,
+        "title": "Family Tree",
+        "description": "My time on the FamilySearch Family Tree Team was about working on parts of web apps rather than entire web pages. I also served for a time as a team lead which involved building up the team and helping team members be successful. Working on app parts and being a team lead resulted in not having one entire page example to show and most of the pages require an account (it's free) to see them. The best page I could think of is the Family Tree Overview page even though I DID NOT work on that page. It does provide a good explanation of the Family Tree. Regarding my work as a team lead I subscribe to <a href='https://www.manager-tools.com/'>Manager Tools</a> and regularly listen to its podcasts. I believe in giving feedback, one-on-ones, regular results discussions, and regular reviews.",
+        "projectDemoUrl": ["Family Tree", "https://www.familysearch.org/tree/overview/"]
+      },
+      {
+        "whichProject": 3,
+        "title": "Marketing",
+        "description": "This was my first project as an official coder. Up until now I was in management and support roles and I coded to help the teams I was on. FamilySearch just started a web development group as well. This team was responsible for brochure pages and this fit my strengths of coding in HTML and CSS with a touch of JavaScript. This is where I learned about making things 'pixel perfect' and 'pixel good enough. The examples below are archived and may take a while to load while the server spins up.",
+        "examples": [
+          {
+            "heading": "Archived Production Examples",
+            "links": [
+              {
+                "text": "About FamilySearch",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/about/?locale=en",
+                "responsive": true
+              },
+              {
+                "text": "Archives microsite",
+                "url": "http://fs-archives-crowtherdr.herokuapp.com/",
+                "responsive": false
+              },
+              {
+                "text": "Donate Today",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/donations/?locale=en",
+                "responsive": false
+              },
+              {
+                "text": "Conference in a Box",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/familysearch-conference-in-a-box/?locale=en",
+                "responsive": true
+              },
+              {
+                "text": "My Family",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/myfamily/?locale=en",
+                "responsive": true
+              },
+              {
+                "text": "Personal Ancestral File",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/paf/?locale=en",
+                "responsive": true
+              },
+              {
+                "text": "Records Preservation Mission Opportunities",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/records-mission/?locale=en",
+                "responsive": false
+              },
+              {
+                "text": "Terms of Use",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/terms/?locale=en",
+                "responsive": false
+              },
+              {
+                "text": "Volunteer",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/volunteer/?locale=en",
+                "responsive": true
+              },
+              {
+                "text": "What's New",
+                "url": "https://fs-landing-crowtherdr.herokuapp.com/whats-new/?locale=en",
+                "responsive": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

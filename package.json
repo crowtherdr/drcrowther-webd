@@ -1,48 +1,83 @@
 {
-  "name": "drcrowther-webd",
-  "version": "1.1.0",
-  "description": "Portfolio of my skills building",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/crowtherdr/drcrowther-webd.git"
-  },
-  "keywords": [
-    "portfolio",
-    "skills",
-    "building",
-    "nodejs",
-    "html",
-    "css",
-    "javascript",
-    "web",
-    "components"
-  ],
-  "author": "David R. Crowther",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/crowtherdr/drcrowther-webd/issues"
-  },
-  "homepage": "https://github.com/crowtherdr/drcrowther-webd#readme",
-  "engines": {
-    "node": "8"
-  },
+  "name": "react-ts",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "body-parser": "~1.18.2",
-    "ejs": "~2.5.7",
-    "express": "^4.16.3",
-    "express-ejs-layouts": "~2.3.1",
-    "supervisor": "~0.12.0"
+    "@linaria/babel-preset": "^4.3.0",
+    "@linaria/core": "^4.2.2",
+    "@linaria/react": "^4.3.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.2.2",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-reveal": "^1.2.2",
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.8.8",
+    "react-tilt": "^0.1.4",
+    "serve": "^14.0.1",
+    "web-vitals": "^3.0.4"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "eslint": "^4.18.2",
-    "fs-javascript": "github:fs-webdev/fs-javascript",
-    "gulp": "^3.9.1",
-    "gulp-vulcanize": "^7.0.0"
+    "@linaria/webpack5-loader": "^4.1.8",
+    "@types/eslint": "^8.4.10",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/prettier": "^2.7.1",
+    "@types/react-helmet": "^6.1.2",
+    "@types/react-scroll": "^1.8.3",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "customize-cra": "^1.0.0",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.1.2",
+    "react-app-rewired": "^2.1.8",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "webpack": "^5.0.0"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "scripts": {
+    "preinstall": "npx typesync || :",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+    "commit": "git-cz",
+    "lint": "eslint --ext .js,.ts,.tsx 'src/**'",
+    "lint:fix": "eslint --ext .js,.ts,.tsx 'src/**' --fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

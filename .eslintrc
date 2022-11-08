@@ -1,6 +1,0 @@
-{
-  "extends":"./node_modules/fs-javascript/linters/.eslintrc",
-  "rules": {
-
-  }
-}

@@ -1,2 +1,2 @@
-web: supervisor app.js
+web: serve -s build
 
