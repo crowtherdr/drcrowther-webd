@@ -88,6 +88,12 @@ function App(): JSX.Element {
             ). Then <a href="https://github.com/callstack/linaria/">Linaria</a> was
             added.
           </p>
+          <p>
+            <a href="mailto:crowtherdr+portfolio@gmail.com">
+              crowtherdr+portfolio@gmail.com
+            </a>
+          </p>
+          <p>© 2022 David R. Crowther</p>
         </section>
         {/* <section className="App-section">
           <p>Hi, I&apos;m David!</p>
