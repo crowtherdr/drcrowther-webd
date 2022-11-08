@@ -8,7 +8,7 @@ module.exports = override(
     use: [
       { loader: 'babel-loader' },
       {
-        loader: '@linaria/webpack-loader',
+        loader: '@linaria/webpack5-loader',
         options: {
           cacheDirectory: 'src/.linaria_cache',
           sourceMap: process.env.NODE_ENV !== 'production',
