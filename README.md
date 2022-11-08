@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App using the TypeScript template](https://create-react-app.dev/docs/adding-typescript/).
 
+CRA customizations are possible thanks to [customize-cra](https://www.npmjs.com/package/customize-cra) and [react-app-rewired](https://www.npmjs.com/package/react-app-rewired).
+
+Thanks to https://github.com/Ibaslogic for the https://github.com/Ibaslogic/react-linaria-cra repo to get mine updated to Linaria 4.
+
 ## Running App Locally
 There are a few steps to get this app cloned and ready to run locally.
 1. Clone this repo to your machine  
