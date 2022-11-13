@@ -1,29 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { css } from '@linaria/core'
 import { styled } from '@linaria/react';
 import Fade from 'react-reveal/Fade'
-import Tilt from 'react-tilt'
 import ProjectsContent from '../../content/projects_content_en.json'
-import laHomelandProjectExample from '../../assets/project-examples/la-homeland-dia-de-los-muertos.jpg'
-import familyTreeProjectExample from '../../assets/project-examples/family-tree-overview.jpg'
-import aboutFS from '../../assets/project-examples/about-fs.jpg'
-import conferenceInBox from '../../assets/project-examples/conference-in-a-box.jpg'
-import donateToday from '../../assets/project-examples/donate-today.jpg'
-import fsArchives from '../../assets/project-examples/fs-archives.jpg'
-import fsTermsOfUse from '../../assets/project-examples/fs-terms-of-use.jpg'
-import myFamily from '../../assets/project-examples/my-family.jpg'
-import personalAncestralFile from '../../assets/project-examples/personal-ancestral-file.jpg'
-import recordsPresMissionOpps from '../../assets/project-examples/records-preservation-mission-opportunities.jpg'
-import volunteer from '../../assets/project-examples/volunteer.jpg'
-import whatsNew from '../../assets/project-examples/whats-new.jpg'
-
-const exampleImages = ['', laHomelandProjectExample, familyTreeProjectExample, '', '', '']
-const exampleMarketingPages = [aboutFS, fsArchives, donateToday, conferenceInBox, myFamily, personalAncestralFile, recordsPresMissionOpps, fsTermsOfUse, volunteer, whatsNew]
-
-const RoundedDiv = styled.div`
-  border-radius: .25rem;
-  overflow: hidden;
-`
+import ProjectExampleImage from './ProjectExampleImage';
 
 const projectsCss = css`
   margin: 200px auto 40px; /* From .app-section. Figure out how to include without duplicating. */
@@ -157,17 +137,30 @@ const Projects = () => {
                             <ol>
                             {!!examples.length && examples[0]?.links && examples[0]?.links.map((exampleLink, index) => {
                               const elementKey = `key${index}`
-                              return (<li key={elementKey}><a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="cta-btn"
-                                href={exampleLink.url}
-                                onMouseEnter={() => {
-                                  setWhichMarketingExample(index)
-                                }}
-                              >
-                                {exampleLink.text}
-                              </a></li>)
+
+                              if (exampleLink?.url) {
+                                return (<li key={elementKey}><a
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="cta-btn"
+                                  href={exampleLink?.url}
+                                  onMouseEnter={() => {
+                                    setWhichMarketingExample(index)
+                                  }}
+                                >
+                                  {exampleLink.text}
+                                </a></li>)
+                              } else {
+                                return (<li key={elementKey}><a
+                                  rel="noopener noreferrer"
+                                  className="cta-btn"
+                                  onMouseEnter={() => {
+                                    setWhichMarketingExample(index)
+                                  }}
+                                >
+                                  {exampleLink.text}
+                                </a></li>)
+                              }
                             })}
                             </ol>
                         </>
@@ -194,31 +187,24 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="image">
-                      <a
-                        href={whichProject !== 3 ? projectDemoUrl[1]: examples[0]?.links[whichMarketingExample]?.url}
-                        target="_blank"
-                        aria-label="Project Link"
-                        rel="noopener noreferrer"
-                      >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
+                      { examples[0]?.links[whichMarketingExample]?.url && (
+                        <a
+                          href={whichProject !== 3 ? projectDemoUrl[1]: examples[0]?.links[whichMarketingExample]?.url}
+                          target="_blank"
+                          aria-label="Project Link"
+                          rel="noopener noreferrer"
                         >
-                          <RoundedDiv data-tilt className={projectThumbnail}>
-                            { whichProject !== 3 && exampleImages[whichProject] && (<img alt={'alt'} src={exampleImages[whichProject]} />)}
-                            { whichProject === 3 && exampleMarketingPages[0] && (<img id="marketingExample" alt={'alt'} src={exampleMarketingPages[whichMarketingExample]} />)}
-                          </RoundedDiv>
-                        </Tilt>
-                      </a>
+                          <ProjectExampleImage whichMarketingExample={whichMarketingExample} whichProject={whichProject} />
+                        </a>
+                      )}
+                      { !examples[0]?.links[whichMarketingExample]?.url && (
+                        <a
+                          aria-label="Project Link"
+                          rel="noopener noreferrer"
+                        >
+                          <ProjectExampleImage whichMarketingExample={whichMarketingExample} whichProject={whichProject} />
+                        </a>
+                      )}
                     </div>
                   </Fade>
                 </div>
