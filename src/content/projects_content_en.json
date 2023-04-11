@@ -31,7 +31,7 @@
             "links": [
               {
                 "text": "About FamilySearch",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/about/?locale=en",
+                "url": "",
                 "responsive": true
               },
               {
@@ -40,42 +40,42 @@
               },
               {
                 "text": "Donate Today",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/donations/?locale=en",
+                "url": "",
                 "responsive": false
               },
               {
                 "text": "Conference in a Box",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/familysearch-conference-in-a-box/?locale=en",
+                "url": "",
                 "responsive": true
               },
               {
                 "text": "My Family",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/myfamily/?locale=en",
+                "url": "",
                 "responsive": true
               },
               {
                 "text": "Personal Ancestral File",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/paf/?locale=en",
+                "url": "",
                 "responsive": true
               },
               {
                 "text": "Records Preservation Mission Opportunities",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/records-mission/?locale=en",
+                "url": "",
                 "responsive": false
               },
               {
                 "text": "Terms of Use",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/terms/?locale=en",
+                "url": "",
                 "responsive": false
               },
               {
                 "text": "Volunteer",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/volunteer/?locale=en",
+                "url": "",
                 "responsive": true
               },
               {
                 "text": "What's New",
-                "url": "https://fs-landing-crowtherdr.herokuapp.com/whats-new/?locale=en",
+                "url": "",
                 "responsive": true
               }
             ]
