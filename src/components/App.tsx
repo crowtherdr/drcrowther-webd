@@ -93,7 +93,7 @@ function App(): JSX.Element {
               crowtherdr+portfolio@gmail.com
             </a>
           </p>
-          <p>© 2022 David R. Crowther</p>
+          <p>© 2023 David R. Crowther</p>
         </section>
         {/* <section className="App-section">
           <p>Hi, I&apos;m David!</p>
