@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 // import logo from './logo.svg'
-import { styled } from '@linaria/react'
+// import { styled } from '@linaria/react'
 import Fade from 'react-reveal/Fade'
-import { Link } from 'react-scroll'
+// import { Link } from 'react-scroll'
 import ProfileImage from '../assets/about-me.jpg'
 import KnowMoreContent from '../content/know_more_content_en.json'
 import Hero from './Hero/Hero'
@@ -85,13 +85,10 @@ function App(): JSX.Element {
             <a href="https://create-react-app.dev/docs/adding-typescript/">
               Create React App with the TypeScript template
             </a>
-            ). Then <a href="https://github.com/callstack/linaria/">Linaria</a> was
-            added.
+            ). Then <a href="https://github.com/callstack/linaria/">Linaria</a> was added.
           </p>
           <p>
-            <a href="mailto:crowtherdr+portfolio@gmail.com">
-              crowtherdr+portfolio@gmail.com
-            </a>
+            <a href="mailto:crowtherdr+portfolio@gmail.com">crowtherdr+portfolio@gmail.com</a>
           </p>
           <p>© 2023 David R. Crowther</p>
         </section>
