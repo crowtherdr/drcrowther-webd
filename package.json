@@ -24,6 +24,7 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@linaria/webpack5-loader": "^4.5.4",
     "@types/customize-cra": "~1.0.8",
     "@types/eslint": "^8.4.10",
@@ -53,7 +54,7 @@
     "webpack": "^5.96.1"
   },
   "engines": {
-    "node": "16"
+    "node": "20"
   },
   "scripts": {
     "preinstall": "npx typesync || :",
