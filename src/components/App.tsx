@@ -90,7 +90,7 @@ function App(): JSX.Element {
           <p>
             <a href="mailto:crowtherdr+portfolio@gmail.com">crowtherdr+portfolio@gmail.com</a>
           </p>
-          <p>© 2024 David R. Crowther</p>
+          <p>© 2025 David R. Crowther</p>
         </section>
         {/* <section className="App-section">
           <p>Hi, I&apos;m David!</p>

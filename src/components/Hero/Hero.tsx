@@ -5,6 +5,9 @@ import Fade from 'react-reveal/Fade'
 import { Link } from 'react-scroll'
 import HeroContent from '../../content/hero_content_en.json'
 
+// Type assertion to fix React 18 compatibility with react-scroll
+const ScrollLink = Link as any
+
 const Hero = () => {
   const [isDesktop, setIsDesktop] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -37,9 +40,9 @@ const Hero = () => {
       <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
         <p className="hero-cta">
           <span className="cta-btn cta-btn--hero">
-            <Link to="about" smooth duration={1000}>
+            <ScrollLink to="about" smooth duration={1000}>
             {HeroContent?.pageContent?.knowMoreLink}
-            </Link>
+            </ScrollLink>
           </span>
         </p>
       </Fade>
