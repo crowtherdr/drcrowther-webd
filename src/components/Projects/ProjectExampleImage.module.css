@@ -1,0 +1,24 @@
+.roundedDiv {
+  border-radius: .25rem;
+  overflow: hidden;
+}
+
+.projectThumbnail {
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s ease-out;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
+    0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.projectThumbnail img {
+  max-width: 660px;
+}
+
+@media (max-width: 990px) {
+  .projectThumbnail img {
+    margin-top: 24px;
+    width: 100%;
+  }
+}

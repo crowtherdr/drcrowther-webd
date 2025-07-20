@@ -1,76 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { css } from '@linaria/core'
-import { styled } from '@linaria/react';
 import Fade from 'react-reveal/Fade'
 import ProjectsContent from '../../content/projects_content_en.json'
-import ProjectExampleImage from './ProjectExampleImage';
-
-const projectsCss = css`
-  margin: 200px auto 40px; /* From .app-section. Figure out how to include without duplicating. */
-  margin-top: -15rem;
-  padding-top: 15rem;
-
-  @media (max-width: 990px) {
-    padding-right: 2rem;
-    padding-left: 2rem;
-
-    & .project-wrapper .row {
-      margin-bottom: 4rem;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    .text a + a {
-      margin-top: 12px;
-    }
-  }
-`
-
-const projectWrapper = css`
-  margin-bottom: 15rem;
-
-  .row {
-    margin-bottom: 8rem;
-  }
-
-  .text {
-    text-align: left;
-
-    .title {
-      font-weight: bold;
-      margin-bottom: 1.8rem;
-      font-size: 2.5rem;
-    }
-
-    & p > a {
-      color: #4589ff;
-    }
-  }
-
-  .image {
-    width: 90%;
-    margin: 0 auto;
-  }
-`
-
-const projectThumbnail = css`
-  border: none;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.2s ease-out;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-  transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
-    0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-  & img {
-    max-width: 660px;
-  }
-
-  @media (max-width: 990px) {
-    & img {
-      margin-top: 24px;
-      width: 100%;
-    }
-  }
-`
+import ProjectExampleImage from './ProjectExampleImage'
+import styles from './Projects.module.css'
 
 const Projects = () => {
   const [isDesktop, setIsDesktop] = useState(false)
@@ -94,9 +26,9 @@ const Projects = () => {
   // Thanks to https://github.com/cobidev/gatsby-simplefolio for my site theme inspiration.
 
   return (
-    <section className={projectsCss}>
+    <section className={styles.projectsCss}>
       <div className="container">
-        <div className={projectWrapper}>
+        <div className={styles.projectWrapper}>
           <h2 className="section-title">{ProjectsContent?.pageContent?.mainHeading}</h2>
           {ProjectsContent?.pageContent?.projects.map(
                       (project, index) => {

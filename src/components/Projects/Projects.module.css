@@ -1,0 +1,69 @@
+.projectsCss {
+  margin: 200px auto 40px; /* From .app-section. Figure out how to include without duplicating. */
+  margin-top: -15rem;
+  padding-top: 15rem;
+}
+
+@media (max-width: 990px) {
+  .projectsCss {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .projectsCss .projectWrapper .row {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .projectsCss .text a + a {
+    margin-top: 12px;
+  }
+}
+
+.projectWrapper {
+  margin-bottom: 15rem;
+}
+
+.projectWrapper .row {
+  margin-bottom: 8rem;
+}
+
+.projectWrapper .text {
+  text-align: left;
+}
+
+.projectWrapper .text .title {
+  font-weight: bold;
+  margin-bottom: 1.8rem;
+  font-size: 2.5rem;
+}
+
+.projectWrapper .text p > a {
+  color: #4589ff;
+}
+
+.projectWrapper .image {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.projectThumbnail {
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s ease-out;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
+    0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.projectThumbnail img {
+  max-width: 660px;
+}
+
+@media (max-width: 990px) {
+  .projectThumbnail img {
+    margin-top: 24px;
+    width: 100%;
+  }
+}
