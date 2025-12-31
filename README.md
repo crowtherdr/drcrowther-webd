@@ -78,6 +78,9 @@ The `test:ci` script is optimized for continuous integration:
 - Runs Cypress tests headlessly
 - Cleans up background processes
 
+Pull request checks are done with a deploy to Netlify.com.
+The site is deployed with Render.com.
+
 ### Browser Control
 The `.env` file can control whether Vite opens a browser:
 - Set `VITE_CI=true` to suppress browser opening (useful for CI)

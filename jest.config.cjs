@@ -8,4 +8,12 @@ module.exports = {
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
   testPathIgnorePatterns: ['/node_modules/', '/cypress/'],
-};
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 97,
+      lines: 97,
+      statements: 97,
+    },
+  },
+}
