@@ -80,11 +80,8 @@ function App(): JSX.Element {
         <section className="App-section">
           <h2>About this site.</h2>
           <p>
-            This site is built with React and TypeScript. It was started with (
-            <a href="https://create-react-app.dev/docs/adding-typescript/">
-              Create React App with the TypeScript template
-            </a>
-            ). Then <a href="https://github.com/callstack/linaria/">Linaria</a> was added.
+            This site is built with Vite, React (with TypeScript), &{' '}
+            <a href="https://github.com/callstack/linaria/">Linaria</a> was added.
           </p>
           <p>
             <a href="mailto:crowtherdr+portfolio@gmail.com">crowtherdr+portfolio@gmail.com</a>
