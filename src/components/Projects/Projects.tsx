@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Fade from 'react-reveal/Fade'
+import { motion } from 'framer-motion'
 import ProjectsContent from '../../content/projects_content_en.json'
 import ProjectExampleImage from './ProjectExampleImage'
 import styles from './Projects.module.css'
@@ -30,115 +30,127 @@ const Projects = () => {
       <div className="container">
         <div className={styles.projectWrapper}>
           <h2 className="section-title">{ProjectsContent?.pageContent?.mainHeading}</h2>
-          {ProjectsContent?.pageContent?.projects.map(
-                      (project, index) => {
-            const { whichProject, title, description, projectDemoUrl = [], examples = [] } = project;
+          {ProjectsContent?.pageContent?.projects.map((project, index) => {
+            const { whichProject, title, description, projectDemoUrl = [], examples = [] } = project
             // const exampleLinks = examples[0]?.links || []
 
             return (
               <div key={index} className="row">
                 <div className="col-lg-4 col-sm-12">
-                  <Fade
-                    left={isDesktop}
-                    bottom={isMobile}
-                    duration={1000}
-                    delay={500}
-                    distance="30px"
+                  <motion.div
+                    initial={{ opacity: 0, x: isDesktop ? -30 : 0, y: isMobile ? 30 : 0 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="text"
                   >
-                    <div className="text">
-                      <h3 className="title">{title || 'Project Title'}</h3>
-                      <div>
-                        <p>
-                          {description ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                        </p>
-                        <p className="mb-4">{false || ''}</p>
-                      </div>
-                      {!!projectDemoUrl.length && (<a
+                    <h3 className="title">{title || 'Project Title'}</h3>
+                    <div>
+                      <p>
+                        {description ||
+                          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                      </p>
+                      <p className="mb-4">{false || ''}</p>
+                    </div>
+                    {!!projectDemoUrl.length && (
+                      <a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--hero"
                         href={projectDemoUrl[1]}
                       >
-                        {projectDemoUrl[0] ? projectDemoUrl[0] : ("See Live")}
-                      </a>)}
+                        {projectDemoUrl[0] ? projectDemoUrl[0] : 'See Live'}
+                      </a>
+                    )}
 
-                      {!!examples.length && (
-                        <>
-                          <p>{examples[0].heading}</p>
-                            <ol>
-                            {!!examples.length && examples[0]?.links && examples[0]?.links.map((exampleLink, index) => {
+                    {!!examples.length && (
+                      <>
+                        <p>{examples[0].heading}</p>
+                        <ol>
+                          {!!examples.length &&
+                            examples[0]?.links &&
+                            examples[0]?.links.map((exampleLink, index) => {
                               const elementKey = `key${index}`
 
                               if (exampleLink?.url) {
-                                return (<li key={elementKey}><a
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="cta-btn"
-                                  href={exampleLink?.url}
-                                  onMouseEnter={() => {
-                                    setWhichMarketingExample(index)
-                                  }}
-                                >
-                                  {exampleLink.text}
-                                </a></li>)
+                                return (
+                                  <li key={elementKey}>
+                                    <a
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="cta-btn"
+                                      href={exampleLink?.url}
+                                      onMouseEnter={() => {
+                                        setWhichMarketingExample(index)
+                                      }}
+                                    >
+                                      {exampleLink.text}
+                                    </a>
+                                  </li>
+                                )
                               } else {
-                                return (<li key={elementKey}><a
-                                  rel="noopener noreferrer"
-                                  className="cta-btn"
-                                  onMouseEnter={() => {
-                                    setWhichMarketingExample(index)
-                                  }}
-                                >
-                                  {exampleLink.text}
-                                </a></li>)
+                                return (
+                                  <li key={elementKey}>
+                                    <a
+                                      rel="noopener noreferrer"
+                                      className="cta-btn"
+                                      onMouseEnter={() => {
+                                        setWhichMarketingExample(index)
+                                      }}
+                                    >
+                                      {exampleLink.text}
+                                    </a>
+                                  </li>
+                                )
                               }
                             })}
-                            </ol>
-                        </>
-                      )}
-                      {false && (
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
-                          href={'repo'}
-                        >
-                          Source Code
-                        </a>
-                      )}
-                    </div>
-                  </Fade>
+                        </ol>
+                      </>
+                    )}
+                    {false && (
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn text-color-main"
+                        href={'repo'}
+                      >
+                        Source Code
+                      </a>
+                    )}
+                  </motion.div>
                 </div>
                 <div className="col-lg-8 col-sm-12">
-                  <Fade
-                    right={isDesktop}
-                    bottom={isMobile}
-                    duration={1000}
-                    delay={1000}
-                    distance="30px"
+                  <motion.div
+                    initial={{ opacity: 0, x: isDesktop ? 30 : 0, y: isMobile ? 30 : 0 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ duration: 1, delay: 1 }}
+                    className="image"
                   >
-                    <div className="image">
-                      { examples[0]?.links[whichMarketingExample]?.url && (
-                        <a
-                          href={whichProject !== 3 ? projectDemoUrl[1]: examples[0]?.links[whichMarketingExample]?.url}
-                          target="_blank"
-                          aria-label="Project Link"
-                          rel="noopener noreferrer"
-                        >
-                          <ProjectExampleImage whichMarketingExample={whichMarketingExample} whichProject={whichProject} />
-                        </a>
-                      )}
-                      { !examples[0]?.links[whichMarketingExample]?.url && (
-                        <a
-                          aria-label="Project Link"
-                          rel="noopener noreferrer"
-                        >
-                          <ProjectExampleImage whichMarketingExample={whichMarketingExample} whichProject={whichProject} />
-                        </a>
-                      )}
-                    </div>
-                  </Fade>
+                    {examples[0]?.links[whichMarketingExample]?.url && (
+                      <a
+                        href={
+                          whichProject !== 3
+                            ? projectDemoUrl[1]
+                            : examples[0]?.links[whichMarketingExample]?.url
+                        }
+                        target="_blank"
+                        aria-label="Project Link"
+                        rel="noopener noreferrer"
+                      >
+                        <ProjectExampleImage
+                          whichMarketingExample={whichMarketingExample}
+                          whichProject={whichProject}
+                        />
+                      </a>
+                    )}
+                    {!examples[0]?.links[whichMarketingExample]?.url && (
+                      <a aria-label="Project Link" rel="noopener noreferrer">
+                        <ProjectExampleImage
+                          whichMarketingExample={whichMarketingExample}
+                          whichProject={whichProject}
+                        />
+                      </a>
+                    )}
+                  </motion.div>
                 </div>
               </div>
             )

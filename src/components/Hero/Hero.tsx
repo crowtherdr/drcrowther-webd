@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 // import { css } from '@linaria/core'
 // import { styled } from '@linaria/react';
-import Fade from 'react-reveal/Fade'
+import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import HeroContent from '../../content/hero_content_en.json'
 
@@ -27,28 +27,39 @@ const Hero = () => {
 
   return (
     <header className="Hero-section">
-    <div className="container">
-      <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-        <h1 className="hero-title">
-          {HeroContent?.pageContent?.hiIntro}
-          <span className="hero-title-name"><span className="text-color-main"> {HeroContent?.pageContent?.hiName}</span>.<br />
-          {HeroContent?.pageContent?.hiIAmA}<span>{HeroContent?.pageContent?.hiWhatIAm}</span>.</span>
-          {/* <span>disciple</span>
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, x: isDesktop ? -30 : 0, y: isMobile ? 30 : 0 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <h1 className="hero-title">
+            {HeroContent?.pageContent?.hiIntro}
+            <span className="hero-title-name">
+              <span className="text-color-main"> {HeroContent?.pageContent?.hiName}</span>.<br />
+              {HeroContent?.pageContent?.hiIAmA}
+              <span>{HeroContent?.pageContent?.hiWhatIAm}</span>.
+            </span>
+            {/* <span>disciple</span>
           <span>family man</span> */}
-        </h1>
-      </Fade>
-      <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-        <p className="hero-cta">
-          <span className="cta-btn cta-btn--hero">
-            <ScrollLink to="about" smooth duration={1000}>
-            {HeroContent?.pageContent?.knowMoreLink}
-            </ScrollLink>
-          </span>
-        </p>
-      </Fade>
-    </div>
-  </header>
-)
+          </h1>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: isDesktop ? -30 : 0, y: isMobile ? 30 : 0 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
+          <p className="hero-cta">
+            <span className="cta-btn cta-btn--hero">
+              <ScrollLink to="about" smooth duration={1000}>
+                {HeroContent?.pageContent?.knowMoreLink}
+              </ScrollLink>
+            </span>
+          </p>
+        </motion.div>
+      </div>
+    </header>
+  )
 }
 
 export default Hero
