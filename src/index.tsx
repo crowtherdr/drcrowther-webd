@@ -5,7 +5,6 @@ import './styles/globals.css'
 import App from './components/App'
 import reportWebVitals from './reportWebVitals'
 
-// eslint-disable-next-line
 const root = createRoot(document.getElementById('root')!)
 root.render(<App />)
 // Great instructions for implementing Linaria in CRA with TypeScript

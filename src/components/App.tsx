@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 // import logo from './logo.svg'
 // import { styled } from '@linaria/react'
-import Fade from 'react-reveal/Fade'
+import { motion } from 'framer-motion'
 // import { Link } from 'react-scroll'
 import ProfileImage from '../assets/about-me.jpg'
 import KnowMoreContent from '../content/know_more_content_en.json'
 import Hero from './Hero/Hero'
 import Projects from './Projects/Projects'
 
-// eslint-disable-next-line max-lines-per-function
 function App(): JSX.Element {
   const [isDesktop, setIsDesktop] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -35,44 +34,44 @@ function App(): JSX.Element {
             <h2 className="section-title">{KnowMoreContent?.pageContent?.mainHeading}</h2>
             <div className="about-wrapper row">
               <div className="col-md-6 col-sm-12">
-                <Fade bottom duration={1000} delay={600} distance="30px">
-                  <div className="about-wrapper__image">
-                    <img alt="profile picture" src={ProfileImage} />
-                  </div>
-                </Fade>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                  className="about-wrapper__image"
+                >
+                  <img alt="profile picture" src={ProfileImage} />
+                </motion.div>
               </div>
               <div className="col-md-6 col-sm-12">
-                <Fade
-                  left={isDesktop}
-                  bottom={isMobile}
-                  duration={1000}
-                  delay={1000}
-                  distance="30px"
+                <motion.div
+                  initial={{ opacity: 0, x: isDesktop ? -30 : 0, y: isMobile ? 30 : 0 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  transition={{ duration: 1, delay: 1 }}
+                  className="about-wrapper__info"
                 >
-                  <div className="about-wrapper__info">
-                    {KnowMoreContent?.pageContent?.mainContentParagraphArray.map(
-                      (mainContentParagraph, index) => {
-                        return (
-                          <p key={index} className="about-wrapper__info-text">
-                            {mainContentParagraph}
-                          </p>
-                        )
-                      }
-                    )}
-                    {/* {resume && (
-                  <span className="d-flex mt-3">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cta-btn cta-btn--resume"
-                      href={resume}
-                    >
-                      Resume
-                    </a>
-                  </span>
-                )} */}
-                  </div>
-                </Fade>
+                  {KnowMoreContent?.pageContent?.mainContentParagraphArray.map(
+                    (mainContentParagraph, index) => {
+                      return (
+                        <p key={index} className="about-wrapper__info-text">
+                          {mainContentParagraph}
+                        </p>
+                      )
+                    }
+                  )}
+                  {/* {resume && (
+                <span className="d-flex mt-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cta-btn cta-btn--resume"
+                    href={resume}
+                  >
+                    Resume
+                  </a>
+                </span>
+              )} */}
+                </motion.div>
               </div>
             </div>
           </div>

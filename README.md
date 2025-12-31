@@ -1,57 +1,106 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App using the TypeScript template](https://create-react-app.dev/docs/adding-typescript/).
+# drcrowther-webd
 
-CRA customizations are possible thanks to [customize-cra](https://www.npmjs.com/package/customize-cra) and [react-app-rewired](https://www.npmjs.com/package/react-app-rewired).
+This project is a modern React + TypeScript web app, now powered by [Vite](https://vitejs.dev/) for fast development and builds. It uses [Yarn](https://yarnpkg.com/) for package management.
 
-Thanks to https://github.com/Ibaslogic for the https://github.com/Ibaslogic/react-linaria-cra repo to get mine updated to Linaria 4.
+## Getting Started
 
-## Running App Locally
-There are a few steps to get this app cloned and ready to run locally.
-1. Clone this repo to your machine  
-  `git clone https://github.com/crowtherdr/drcrowther-webd.git`
-2. Run `yarn install`
-3. You should now be in a good state to run/develop the app locally
+1. **Clone the repo:**
+  ```sh
+  git clone https://github.com/crowtherdr/drcrowther-webd.git
+  cd drcrowther-webd
+  ```
+2. **Install dependencies:**
+  ```sh
+  yarn install
+  ```
+3. **Start the dev server:**
+  ```sh
+  yarn dev
+  ```
+  Open [http://localhost:5173](http://localhost:5173) to view it in the browser (default Vite port).
 
 ## Available Scripts
 
-In the project directory, you can run:
+All scripts below are run with Yarn:
 
-### `yarn start`
+### Development
+- `yarn dev` — Start the Vite development server (auto-opens browser)
+- `yarn build` — Build the app for production (output in `dist/`)
+- `yarn preview` — Preview the production build locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Testing
+- `yarn test` — Run Jest unit tests
+- `yarn test:watch` — Run Jest in watch mode for development
+- `yarn test:ci` — Run all tests (Jest + Cypress) for CI/CD (headless, no browser)
+- `yarn cypress:open` — Open Cypress test runner (interactive)
+- `yarn cypress:run` — Run Cypress E2E tests (headless)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Code Quality
+- `yarn lint` — Run ESLint and Prettier checks on all JS/TS files
+- `yarn lint:fix` — Auto-fix lint and formatting issues
 
-### `yarn test`
+## Tooling & Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Vite** for fast dev/build
+- **React 19** with **TypeScript**
+- **Node 24** required
+- **ESLint** (flat config) and **Prettier** for code quality and formatting
+- **Jest** + **React Testing Library** for unit/component testing
+- **Cypress** for E2E testing
+- **framer-motion** for animation (replacing react-reveal)
+- **react-parallax-tilt** for tilt effects (replacing react-tilt)
+- **Linaria** for zero-runtime CSS-in-JS
 
-### `yarn build`
+## Testing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project uses both Jest and Cypress for comprehensive testing:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Jest**: Unit and component tests with React Testing Library
+- **Cypress**: End-to-end testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running Tests Locally
+```sh
+# Unit tests only
+yarn test
 
-### `yarn eject`
+# E2E tests (interactive)
+yarn cypress:open
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# All tests (CI mode)
+yarn test:ci
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### CI/CD Testing
+The `test:ci` script is optimized for continuous integration:
+- Starts the Vite dev server automatically
+- Runs Jest tests in CI mode
+- Runs Cypress tests headlessly
+- Cleans up background processes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Browser Control
+The `.env` file can control whether Vite opens a browser:
+- Set `VITE_CI=true` to suppress browser opening (useful for CI)
+- Omit or set to empty for normal browser behavior
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Migration Notes
 
-## Learn More
+- This project was originally bootstrapped with Create React App, but is now fully migrated to Vite. All references to CRA, react-app-rewired, and customize-cra have been removed.
+- All animation and tilt effects use modern, actively maintained libraries.
+- Linting uses ESLint v9+ flat config. See `eslint.config.js` for details.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Build the app with:
+```sh
+yarn build
+```
+The output will be in the `dist/` folder, ready for static hosting or deployment.
+
+---
+
+To learn more about the tools used:
+- [Vite Documentation](https://vitejs.dev/guide/)
+- [React Documentation](https://react.dev/)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [ESLint Flat Config Migration](https://eslint.org/docs/latest/use/configure/migration-guide)
