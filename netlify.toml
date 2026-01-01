@@ -3,4 +3,4 @@
   publish = "dist"
 
 [[plugins]]
-  package = "@netlify/plugin-cypress"
+  package = "netlify-plugin-cypress"
