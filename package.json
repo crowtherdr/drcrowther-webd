@@ -63,7 +63,7 @@
   },
   "scripts": {
     "preinstall": "npx typesync || :",
-    "postinstall": "cypress install || :",
+    "postinstall": "cypress install",
     "start": "react-app-rewired start",
     "dev": "vite --open",
     "build": "yarn test:ci && vite build",
