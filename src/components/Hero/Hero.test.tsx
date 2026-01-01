@@ -20,7 +20,7 @@ describe('Hero Component', () => {
   it('should render hero content', () => {
     render(<Hero />)
 
-    expect(screen.getByText(/hi, my name is/i)).toBeInTheDocument()
+    expect(screen.getByText(/hi, my nme is/i)).toBeInTheDocument()
     expect(screen.getByText(/know more/i)).toBeInTheDocument()
   })
 
