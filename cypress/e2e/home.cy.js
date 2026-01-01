@@ -1,6 +1,6 @@
 describe('Home page', () => {
   it('successfully loads', () => {
     cy.visit('/')
-    cy.contains('Crowther') // Adjust to match a visible string on your homepage
+    cy.contains('Crother') // Adjust to match a visible string on your homepage
   })
 })
