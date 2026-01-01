@@ -76,7 +76,7 @@
     "cypress:run": "cypress run",
     "lint": "eslint --ext .js,.ts,.tsx 'src/**'",
     "lint:fix": "eslint --ext .js,.ts,.tsx 'src/**' --fix",
-    "test:ci": "yarn test --ci && (VITE_CI=1 vite & echo $! > vite.pid) && wait-on http://localhost:5173 && yarn cypress:run --browser electron --headless && kill $(cat vite.pid) && rm vite.pid"
+    "test:ci": "yarn test --ci && cypress install && (VITE_CI=1 vite & echo $! > vite.pid) && wait-on http://localhost:5173 && yarn cypress:run --browser electron --headless && kill $(cat vite.pid) && rm vite.pid"
   },
   "browserslist": {
     "production": [
