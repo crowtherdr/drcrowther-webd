@@ -6744,6 +6744,11 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+netlify-plugin-cache@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/netlify-plugin-cache/-/netlify-plugin-cache-1.0.3.tgz#f60514e259dff2b3286b6d60b570bb1c81206794"
+  integrity sha512-CTOwNWrTOP59T6y6unxQNnp1WX702v2R/faR5peSH94ebrYfyY4zT5IsRcIiHKq57jXeyCrhy0GLuTN8ktzuQg==
+
 netlify-plugin-cypress@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/netlify-plugin-cypress/-/netlify-plugin-cypress-2.2.1.tgz#d5c4a3fb00c38d73269dfd5d6121db0eddd204b7"
