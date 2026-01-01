@@ -63,7 +63,7 @@
     "preinstall": "npx typesync || :",
     "start": "react-app-rewired start",
     "dev": "vite --open",
-    "build": "vite build",
+    "build": "yarn test --ci && vite build",
     "preview": "vite preview",
     "commit": "git-cz",
     "test": "jest",
